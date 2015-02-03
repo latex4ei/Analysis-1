@@ -98,7 +98,7 @@ Geometrische Summenformel \qquad
 \begin{math}\begin{array}{l}
 	\sum\limits_{k = 0}^{n}q^k = \frac{1 - q^{n+1}}{1-q}
 \end{array}\end{math}\\
-\\                                   
+\\
 Bernoulli-Ungleichung \qquad \qquad \quad
 \begin{math}\begin{array}{l}
 	(1+a)^n \ge 1 + na
@@ -136,7 +136,7 @@ $n! = 1 \cdot 2 \cdot 3 \cdot \ldots \cdot n$ \qquad  $0! = 1! = 1$
 
 Eine Zusammenfassung wohlunterschiedener Elemente zu einer Menge\\
 explizite Angabe: $A=\{1;2;3\}$\\
-Angabe durch Eigenschaft: $A=\{n\in\mathbb N\ \vert\ 0<n<4\}$\\
+Angabe durch Eigenschaft: $A=\{n\in\mathbb N\ \vert\ 0<n<4\}$
 \subsubsection{Für alle Mengen A,B,C gilt:}
 \begin{enumerate}\itemsep-1pt
 \item $\emptyset \subseteq B $
@@ -281,7 +281,6 @@ $f(t)=A\cdot \cos(\omega t + \varphi_0)=A\cdot \sin(\omega t + \frac{\pi}{2}+ \v
 	& \cos 2x = \cos^2 x - \sin^2 x = 2\cos^2 x - 1\\
  \end{eqnarray*}
 % paragraph additionstheoreme (end)
-
 \hspace{-20pt}
 \scalebox{0.77}
 {
@@ -312,10 +311,9 @@ Für \textbf{(streng) monoton fallend} gilt:
 \item $\frac{a_n}{a_{n+1}} \underset{(>)}{^{\ge}} 1$ \qquad $\lor$ \qquad $\frac{a_{n+1}}{a_n} \underset{(<)}{^{\le}} 1$
 \item Vollständige Induktion: $\forall n \in \mathbb{N}: a_{n+1}\underset{(<)}{^{\le}} a_n$
 \end{enumerate}
-
 \subsubsection{Konvergenz}
 $(a_n)$ ist \emph{Konvergent} mit \emph{Grenzwert} $a$, falls: $\forall \epsilon > 0 \ \exists N  \in \mathbb N_0:  \abs{a_n -a} < \epsilon \ \forall n \ge N$\\
-Eine Folge konvergiert gegen eine Zahl $a$:\ $(a_n) \overset{n \rightarrow \infty}{\longrightarrow} a$\\
+Eine Folge konvergiert gegen eine Zahl $a$:\ $(a_n) \overset{n \rightarrow \infty}{\longrightarrow} a$
 \paragraph{Es gilt:}
 \begin{itemize}\itemsep0pt
 \item Der Grenzwert a einer Folge $(a_n)$ ist eindeutig.
@@ -329,17 +327,25 @@ $\begin{array}{lll}
 (a_n+b_n) \overset{n \rightarrow \infty}{\longrightarrow} a+b & (a_n b_n) \overset{n \rightarrow \infty}{\longrightarrow} ab & (\frac{a_n}{b_n}) \overset{n \rightarrow \infty}{\longrightarrow} \frac{a}{b}\\
 (\lambda a_n) \overset{n \rightarrow \infty}{\longrightarrow} \lambda a & (\sqrt{a_n}) \overset{n \rightarrow \infty}{\longrightarrow} \sqrt{a} & (|a_n|) \overset{n \rightarrow \infty}{\longrightarrow} |a|
 \end{array}$
+\paragraph{Grenzwert bestimmen:}
+\begin{itemize}\itemsep0pt
+\item Wurzeln: Erweitern mit binomischer Formel
+\item Brüche: Zähler und Nenner durch den Koeffizient höchsten Grades teilen
+\item Rekursive Folgen: Fixpunkt berechnen und mit Induktion die Konvergenz gegen einen Fixpunkt beweisen 
+\end{itemize}
 
 \subsubsection{Wichtige Regeln}
 $a_n=q^n \quad \overset{n \rightarrow \infty}{\longrightarrow} \quad \begin{cases} 0 & |q|<1 \\ 1 & q=1 \\ \pm \infty & q < -1  \\  + \infty & q > 1\end{cases}$ \\
 $a_n=\frac{1}{n^k}\rightarrow 0$ \qquad $\forall k \ge 1$\\ 
-$a_n=\left(1+\frac{c}{n}\right)^n \rightarrow e^c$ \qquad \qquad \qquad $2^n \ge n^2$ \quad $\forall n\ge 4$ \\
+$a_n=\left(1+\frac{c}{n}\right)^n \rightarrow e^c$ \\
+$a_n=n\left(c^{\frac1{n}}-1\right) = \ln c$\\
+$a_n=\frac{n^2}{2^n}\ra 0$ \qquad \qquad \qquad ($2^n \ge n^2$ \quad $\forall n\ge 4$) \\
 $\lim\limits_{n\to\infty}n^{\frac{1}{n}}=\lim\limits_{n\to\infty}\sqrt[n]{n}=1$
 
 
 \subsubsection{Limes Inferior und Superior}
 Der Limes superior einer Folge $x_n \subset \mathbb{R}$ ist der größte Grenzwert konvergenter Teilfolgen $x_{n_k}$ der Folge ${x_n}$ \\ \\
-Der Limes inferior einer Folge $x_b \subset \mathbb{R}$ der kleinste Grenzwert konvergenter Teilfolgen $x_{n_k}$ der Folge $x_n$
+Der Limes inferior einer Folge $x_n \subset \mathbb{R}$ der kleinste Grenzwert konvergenter Teilfolgen $x_{n_k}$ der Folge $x_n$
 
 
 \subsection{Reihen}
@@ -348,7 +354,7 @@ Der Limes inferior einer Folge $x_b \subset \mathbb{R}$ der kleinste Grenzwert k
 	\underset{\text{Harmonische Reihe}}{\sum_{n=1}^\infty \frac{1}{n} = \infty} \qquad \qquad  \qquad \qquad \underset{\text{Geometrische Reihe}}{\sum_{n=0}^\infty q^n = \frac{1}{1-q}} \qquad |q|<1
 \end{eqnarray*}
 \begin{eqnarray*}
-	\sum_{n=1}^\infty \frac{1}{n^\alpha} = \begin{cases} \text{konvergent}, & \alpha > 1 \\ \text{divergent}, & \alpha \le 1 \end{cases} \qquad \qquad
+	\sum_{n=1}^\infty \frac{1}{n^\alpha} = \begin{cases} \text{konvergent}, & \alpha > 1 \\ \text{divergent}, & \alpha \le 1 \end{cases} \qquad \qquad \qquad \qquad \qquad \qquad
 \end{eqnarray*}
 
 
@@ -378,19 +384,21 @@ Jede absolute konvergente Reihe ($\sum^\infty_{n=0} |a_n|$) ist konvergent ($\su
 \subsection{Potenzreihen} % (fold)
 % ----------------------------------------------------------------------
 \begin{equation*}
-f(x)=\sum_{n=0}^\infty a_n \cdot (x-a)^n
+f(x)=\sum_{n=0}^\infty a_n \cdot (x-c)^n
 \end{equation*}
 \subsubsection{Konvergenzradius}
 $R = \lim\limits_{n\rightarrow \infty} \abs{\frac{a_n}{a_{n+1}}}=\frac{1}{\lim\limits_{n\rightarrow \infty}\sqrt[n]{\abs{a_n}}}$ \\
 $R =\liminf\limits_{n\rightarrow \infty} \abs{\frac{a_n}{a_{n+1}}}=\frac{1}{\limsup\limits_{n\rightarrow \infty}\sqrt[n]{\abs{a_n}}}$ \\ \\
-Falls $\begin{cases} 
-	\abs{x-a} < R & \text{ konvergiert absolut}\\
-	\abs{x-a} > R & \text{ divergiert} \\
-	\abs{x-a} = R & \text{ keine Aussage möglich}
+$f(x)\begin{cases} 
+	\text{konvergiert absolut} & \abs{x-c} < R \\
+	\text{divergiert} & \abs{x-c} > R \\
+	\text{keine Aussage möglich} & \abs{x-c} = R
 	\end{cases}$\\
-Substitution bei $x^{cn}$ \\
-$w=x^c \rightarrow x=w^\frac{1}{c}$
-$\rightarrow R=R_w^\frac{1}{c}$
+$\Ra x$ konvergiert im offenen Intervall $I=(c-R,c+R)$ \\
+$\Ra$ Bei $x=c-R$ und $x=c+R$ muss die Konvergenz zusätzlich überprüft werden.\\\\
+Substitution bei $f(x)=\sum_{n=0}^\infty a_n \cdot x^{\lambda n}$ \\
+$w=x^\lambda \rightarrow x=w^\frac{1}{\lambda}$
+$\rightarrow R=\left(R_w\right)^\frac{1}{\lambda}$
 
 %-----------------------------------------
 %Konvergenz:\\
@@ -464,7 +472,7 @@ x\arccos (x)-\sqrt{1-x^2} & \arccos(x) & -\frac{1}{\sqrt{1-x^2}}\\
 x\arctan (x)-\frac{1}{2} \ln \left| 1+ x^2 \right| & \arctan (x) & \frac{1}{1+x^2} \\
 x\arctan (x)+\frac{1}{2} \ln \left| 1+ x^2 \right| & \arccot (x) & -\frac{1}{1+x^2} \\
 \sinh(x) & \cosh(x) & \sinh (x) \\
-\cosh(x) & \sinh(x) & \sinh(x)\\
+\cosh(x) & \sinh(x) & \cosh (x)\\
 \end{array}
 \end{math}
 \everymath{\textstyle}
@@ -475,13 +483,15 @@ Volumen: $V = \pi \int_a^b f(x)^2 \mathrm dx$\\
 Oberfläche: $O = 2 \pi \int_a^b f(x) \sqrt{1 + f'(x)^2} \mathrm dx$
 
 \subsubsection{Uneigentliche Integrale}
-$\int\limits_{\text{ok}}^{\text{böse}} f(x) \mathrm dx = \lim\limits_{b\rightarrow \text{böse}}\ \int\limits_{\text{ok}}^b f(x) \mathrm dx$\\
-\\
-Majoranten-Kriterium: $|f(x)|\le g(x)$\\
+$\int\limits_{\text{ok}}^{\text{böse}} f(x) \mathrm dx = \lim\limits_{b\rightarrow \text{böse}}\ \int\limits_{\text{ok}}^b f(x) \mathrm dx$\\ \\ \\
+Majoranten-Kriterium: $|f(x)|\le g(x) = \frac1{x^\alpha}$\\ \\
 $\int\limits_{1}^{\infty} \frac{1}{x^\alpha} \mathrm dx \begin{cases} \frac{1}{\alpha -1}, \quad \alpha > 1 \\ \infty, \qquad \alpha \le 1 \end{cases}$ \qquad
-$\int\limits_{0}^{1} \frac{1}{x^\alpha} \mathrm dx \begin{cases} \frac{1}{\alpha -1}, \quad \alpha < 1 \\ \infty, \qquad \alpha \ge 1 \end{cases}$\\
-\textbf{Cauchy-Hauptwert:} $\int\limits_{-\infty}^{\infty} f(x) \mathrm dx = \lim\limits_{b\rightarrow\infty} \int\limits_{-b}^b f(x) \mathrm dx$ oder\\
-$\int\limits_{a}^{b} f(x) \mathrm dx=\lim\limits_{\varepsilon \rightarrow 0^+}\enbrace{\int\limits_{a}^{-\varepsilon} f(x) \mathrm dx}$
+$\int\limits_{0}^{1} \frac{1}{x^\alpha} \mathrm dx \begin{cases} \frac{1}{\alpha -1}, \quad \alpha < 1 \\ \infty, \qquad \alpha \ge 1 \end{cases}$\\ \\
+\textbf{Cauchy-Hauptwert}
+\begin{eqnarray*}
+& \text{CHW }\int\limits_{-\infty}^{\infty} f(x) \mathrm dx = \lim\limits_{b\rightarrow\infty} \int\limits_{-b}^b f(x) \mathrm dx \\
+& \text{CHW }\int\limits_{a}^{b} f(x) \mathrm dx=\lim\limits_{\varepsilon \rightarrow 0^+}\enbrace{\int\limits_{a}^{c-\varepsilon} f(x) \mathrm dx+\int\limits_{c+\varepsilon}^{b}f(x)\mathrm dx}
+\end{eqnarray*}
 
 \subsubsection{Laplace-Transformation von $f: [0,\infty[ \ra \mathbb R,\ s \mapsto f(s)$}
 $\mathcal L \; f(s) = F(s) = \int\limits_{0}^{\infty} e^{-st} f(t)\ \mathrm dt = \lim\limits_{b \ra \infty} \int\limits_{0}^{b} e^{-st} f(t)\ \mathrm dt$
@@ -503,10 +513,27 @@ Häufige Integrale nach Partialbruchzerlegung
 \begin{align*}
 &\int\frac{1}{x}\mathrm dx = \ln\abs{x}&&\int\frac{1}{x^2}\mathrm dx = -\frac{1}{x}  x \\
 &\int\frac{1}{a+x}\mathrm dx = \ln\abs{a+x} && \int\frac{1}{(a+x)^2}\mathrm dx = -\frac{1}{a+x} \\
-&\int\frac{1}{a-x}\mathrm dx = -\ln\abs{a-x} && \int\frac{1}{(a-x)^2}\mathrm dx = \frac{1}{a-x} \\
+&\int\frac{1}{a-x}\mathrm dx = -\ln\abs{a-x} && \int\frac{1}{(a-x)^2}\mathrm dx = \frac{1}{a-x}1
 \end{align*}
-\\ \\
+\subsubsection{Paratialbruchzerlegung}
+\begin{equation*}
+\frac{B(x)}{Q(x)} = \frac{\ldots}{(x - x_0)} + \ldots + \frac{\ldots}{\ldots}
+\end{equation*}
+\paragraph{Ansatz}
+\begin{itemize}\itemsep0pt
+\item $n$-fache reelle Nullstelle $x_0$: $\frac{A}{x-x_0}+\frac{B}{(x-x_0)^2} +\dots$
+\item $n$-fache komplexe Nullstelle: $\frac{Ax+B}{x^2+px+q}+\frac{Ax+B}{(x^2+px+q)^2}$
+\end{itemize}
+\paragraph{Berechnung von $A,B,C,\dots$}
+\begin{itemize}\itemsep0pt
+\item Nullstellen in $x$ einsetzen (Terme fallen weg)
+\item Ausmultiplizieren und Koeffizientenvergleich
+\end{itemize}
+
+\ \\\\
 \textit{Formelsammlung noch nicht vollständig. Fehlende Inhalte: Taylorentwicklung, Taylorreihe, Kurven in $\mathbb{R}^n$, Differentialrechnungen in $\mathbb{R}^n$.}
+
+
 
 \end{multicols*}
 % Ende der Spalten
