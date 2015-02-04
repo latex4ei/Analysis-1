@@ -407,18 +407,18 @@ $\rightarrow R=\left(R_w\right)^\frac{1}{\lambda}$
 %-----------------------------------------
 \subsubsection{Wichtige Potenzreihen}
 \label{sub:potenzreihen}
-\begin{equation}
+\begin{equation*}
  	e^x = \sum_{n = 0}^{\infty} \frac{x^n}{n!} = \lim\limits_{n\to\infty}\enbrace{1+\frac{x}{n}}^n
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
  	e^z = \sum_{n = 0}^{\infty} \frac{z^n}{n!} \\
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 	 \sin (z) = \sum_{n = 0}^{\infty} (-1)^n \frac{z^{2n +1}}{(2n +1)!} = \frac{e^{iz} - e^{-iz}}{2i} \\
-\end{equation}
-\begin{equation}
+\end{equation*}
+\begin{equation*}
 	 \cos (z) = \sum_{n = 0}^{\infty} (-1)^n \frac{z^{2n}}{(2n)!} = \frac{e^{iz} + e^{-iz}}{2}\\
- \end{equation}
+ \end{equation*}
 % subsection potenzreihen (end)
 
 
@@ -595,7 +595,7 @@ $ \vec \gamma:[a,b] \rightarrow \mathbb R^n, t \mapsto \begin{pmatrix} \gamma_1(
 Besondere Punkte von Kurven:
 \begin{itemize}\itemsep-2pt
 	\item Singulär, falls $\dot \gamma(t)=\vec 0$ (Knick)
-	\item Doppel-punk, falls $\exists t_1,t_2:t_1 \ne t_2 \ \land \ \gamma(t_1)=\gamma(t_2)$
+	\item Doppelpunkt, falls $\exists t_1,t_2:t_1 \ne t_2 \ \land \ \gamma(t_1)=\gamma(t_2)$
 	\item Horizontaler Tangentenpunkt, falls $\dot \gamma_1(t) \ne 0 \ \land \ \dot \gamma_2(t)=0$
 	\item Vertikaler Tangentenpunkt, falls $\dot \gamma_1(t) = 0 \ \land \ \dot \gamma_2(t) \ne 0$
 \end{itemize}
@@ -610,7 +610,7 @@ Besondere Punkte von Kurven:
 Tangenteneineitsvektor an $\gamma(t): T(t)=\frac{\dot \gamma(t)}{\norm{\dot \gamma(t)} }$\\
 Krümmung von $\gamma$: $\kappa(t)= \norm{\frac{\mathrm d^2 \gamma}{\mathrm d s^2}} = \frac{\norm{\dot T(t)}}{s'(t)}$\\
 \\
-\textbf{Vereinfachung} für $n=2$: $\gamma:[a,b] \rightarrow \mathbb R^2, t \mapsto \bigl(x(t),y(t)\bigr)$ \\
+\textbf{Vereinfachung} im $\mathbb{R}^2$ \qquad $\gamma:[a,b] \rightarrow \mathbb R^2, t \mapsto \bigl(x(t),y(t)\bigr)$ \\
 \begin{equation*}
 L(\gamma) = \int_a^b \sqrt{\dot x^2 + \dot y^2}\; \mathrm dt \qquad \qquad \tilde{\kappa}(t)=\frac{\dot x \ddot y - \ddot x \dot y}{(\dot x^2 + \dot y^2)^{\frac{3}{2}}}
 \end{equation*}
