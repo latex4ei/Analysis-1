@@ -1,0 +1,623 @@
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% LaTeX4EI Template for Cheat Sheets                                Version 1.0
+%					
+% Authors: Emanuel Regnath, Martin Zellner
+% Contact: info@latex4ei.de
+% Encode: UTF-8, tabwidth = 4, newline = LF	
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+
+% ======================================================================
+% Document Settings
+% ======================================================================
+
+% possible options: color/nocolor, english/german, threecolumn
+% defaults: color, english
+\documentclass[german]{latex4ei/latex4ei_sheet}
+
+% set document information
+\title{Analysis I -\\ Für Mathematiker}
+\author{Daniel Gloukhman}					% optional, delete if unchanged
+\myemail{danielgloukhman@hotmail.de}			% optional, delete if unchanged
+\mywebsite{www.latex4ei.de}			% optional, delete if unchanged
+
+
+% ======================================================================
+% Begin
+% ======================================================================
+\begin{document}
+
+
+% Title
+% ----------------------------------------------------------------------
+\maketitle   % requires ./img/Logo.pdf
+
+
+% Section
+% ----------------------------------------------------------------------
+\section{Allgemeine Formeln/Ungleichungen}
+
+\begin{sectionbox}
+	\subsection{Abschätzungen}
+	\begin{itemize}
+		\item \textbf{Dreiecksungleichung:}\begin{math}\begin{array}{l}
+	\abs{x + y} \le \abs{x} + \abs{y} \\
+	\abs{\abs{x}- \abs{y}} \le \abs{x-y} 
+\end{array}\end{math}
+
+   		\item \textbf{Bernoulli-Ungleichung:} \begin{math}\begin{array}{l}
+	(1+a)^n \ge 1 + na
+\end{array}\end{math} 
+
+		\item \textbf{Bernoulli für e  $x \in \R$:}\qquad $\text{  }e^x  \ge 1+x $
+		\item \textbf{Nützliche Ungleichung: }$\frac{x+y}{2}\ge\sqrt{xy}\text{ mit gleicheit für }x=y$  
+		\item \textbf{Für $x>y$ und $n>2$ : }$0<\sqrt[n]{x}-\sqrt[n]{y}<\sqrt[n]{x-y}$
+
+	\end{itemize}
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Allgemeine Formeln}
+	Sei $f:\X \rightarrow \Y$ eine Abbildung
+	\begin{itemize}
+	\item \textbf{Injektivität: } $f(x_1)=f(x_2) \Rightarrow x_1=x_2$
+	\item \textbf{Surjektivität: } $\forall y \in \Y \exists x \in \X : f(x)=y$
+	\item  \textbf{Betrag von $z \in \C$ :  } $|z|= \sqrt{z \overline{z}}= \sqrt{Re(z)^2+Im(z)^2}$
+		\item \textbf{Binomialkoeffizient:} \begin{math}\begin{array}{l}
+	\binom{n}{k} = \frac{n!}{k!(n-k)!}  \\
+	\binom{n}{0} = \binom{n}{n} = 1
+\end{array}\end{math}\\ 
+\item \textbf{Binomialsatz:}\begin{math}\begin{array}{l}
+	(a+b)^n = \sum\limits_{k = 0}^{n} \binom{n}{k} a^{n-k} b^{k}
+\end{array}\end{math}
+
+\item \textbf{Mitternachtsformel:}$x_{1,2} =   \frac{- b \pm \sqrt{b^{2} \text{--} 4ac}}{2a}$
+	\end{itemize}
+
+\end{sectionbox}
+
+
+
+
+\section{Zahlenfolgen}
+
+
+\begin{sectionbox}
+	\subsection{Konvergenz}
+	Eine Folge $(a_n)$ konvergiert gegen den Grenzwert a
+
+		
+	
+	$\forall\mathcal{E}>0 \text{ }\exists N \in \R \text{ }\forall n \in \N:\text{ } n>N \Rightarrow |a_n - a|<\mathcal{E}$
+
+	
+	
+	
+	
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Monotoniesatz}
+	
+	Jede beschränkte und monotone Folge ist konvergent
+
+\end{sectionbox}
+
+
+
+\begin{sectionbox}
+	\subsection{Einschließungskriterium}
+	
+Seien $(a_n), (b_n)$  reelle Folgen mit $a = \lim\limits_{n \to \infty}  a_n =  \lim\limits_{n \to \infty}b_n $ , und eine dritte reelle Folge $(c_n)$ erfülle  $(a_n) \le (c_n) \le (b_n)$ für fast alle $n$. Dann konvergiert auch \(c_n\)  gegen $a$.
+	
+	
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Bestimmte Divergenz}
+	
+	\(a_n\) ist bestimmt divergent gegen $+\infty$ falls gilt: \\
+	$\forall M >0 \text{ }\exists N \in \R \text{ }\forall n \in \N: n>N \Rightarrow a_n>M$ \\
+Für $a_n \in \C $ muss $|a_n| \rightarrow +\infty $ gelten
+\end{sectionbox}
+
+
+\begin{sectionbox}
+	\subsection{Cauchy-Folge}
+	Jede konvergente Folge ist eine Cauchy-Folge \\
+	$	\forall\mathcal{E}>0 \text{ }\exists N \in \R \text{ }\forall m,n \in \N:\text{ } m,n>N \Rightarrow |a_m - a_n|<\mathcal{E}$
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Bekannte Grenzwerte}
+	Für jedes $\beta > 0$ gilt:
+	\begin{equation*}
+		\lim \limits_{x \to \infty}(x^\beta e^{-x})= 0, \lim \limits_{x \to \infty} \frac{ln(x)}{x^\beta} = 0, \lim \limits_{x \to 0^+}(x^\beta ln(x))= 0
+	\end{equation*}
+
+\end{sectionbox}
+
+
+
+
+
+\section{Reihen}
+
+\begin{sectionbox}
+	\subsection{Geometrische Reihe}
+	Die Reihe $\sum \limits_{k=0}^{\infty}\ q^k$ konvergiert für $|q|<1$ und divergiert andernfalls. Es gilt:\\
+	$\sum \limits_{k=0}^{\infty}\ q^k = \frac{1}{1-q}$ 
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Quotientenkriterium}
+	Sei $\sum \limits_{k=0}^{\infty}\ a_k$ und existiere 
+	$q := \lim\limits_{k \to \infty} |\frac{a_{k+1}}{a_k}| $ dann gilt: \\
+	- für $q<1$ ist die Reihe absolut konvergent\\
+	- für $q>1$ ist die Reihe divergent
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Wurzelkriterium}
+	
+		Sei $\sum \limits_{k=0}^{\infty}\ a_k$ und existiere 
+	$q := \limsup \limits_{k \to \infty} \sqrt[k]{|a_k|}\ $ dann gilt: \\
+	- für $q<1$ ist die Reihe absolut konvergent\\
+	- für $q>1$ ist die Reihe divergent
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Leibnizkriterium}
+	Sei $(a_n)$ eine monoton fallende Nullfolge.\\Die  Reihe $s = \sum \limits_{k=1}^{\infty}\ (-1)^{k-1} a_k$ konvergiert.\\	
+	Es gilt: $|s - \sum \limits_{k=1}^{n}\ (-1)^{k-1} a_k| \le a_{n+1}$
+		
+
+	
+
+\end{sectionbox}
+
+
+\begin{sectionbox}
+	\subsection{Majoranten/Minorantenkriterium}
+	Sei $\sum a_k$  und $\sum b_k$ zwei Reihen.\\
+	%$|a_k| \le b_k$ 
+	\\1. Gilt $0 \le |a_k| \le b_k$ für fast alle k, und ist die Majorante $\sum  b_k$ konvergent, so konvergiert $\sum  a_k$ absolut. \\
+    \\2. Gilt $0 \le a_k \le b_k$ für fast alle k, und ist die Minorante $\sum  a_k$ divergent, so divergiert $\sum  b_k$ 
+	
+	%\\ Wenn $\sum \limits_{k=1}^{\infty}\ b_k$ konvergiert, konvergiert  $\sum \limits_{k=0}^{\infty}\ a_k$ absolut.\\
+	%$|\sum \limits_{k=0}^{\infty}\ a_k| \le \sum \limits_{k=0}^{\infty}\ b_k$
+
+\end{sectionbox}
+\begin{sectionbox}
+	\subsection{Integralvergleichskriterium}
+	
+	Sei $f:[1, \infty) \rightarrow [0,\infty)$ monoton fallend, dann konvergiert die Reihe $\sum \limits_{k=1}^{\infty} f(k)$ genau dann, wenn das uneigentliche Integral $\int_{1}^{\infty}f(x)dx$ konvergiert.
+\end{sectionbox}
+
+
+\section{Potenzreihen}
+
+\begin{sectionbox}
+	\subsection{Definition}
+	Sei $(a_k)_{k \in \N},z \in \C$,  $\rho \in \R \cup \{\infty\} $ der Konvergenzradius und $z_0$ ein Entwicklungspunkt.\\
+	Die Potenzreihe $P(z)=\sum \limits_{k=0}^{\infty} a_k(z-z_0)^k$ konvergiert absolut für $|z| \le \rho$.
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Konvergenradius}
+	Man betrachte die Koeffizienten Folge $(a_k)$.\\
+	\begin{itemize}
+	\item $\rho := \frac{1}{\limsup\limits_{k \to \infty}\sqrt[k]{|a_k|}}$ mit ,,$\frac{1}{0}=+\infty$" \text{ und } ,,$\frac{1}{\infty}=0$" 
+	\item  $\rho := \frac{1}{\lim\limits_{k \to \infty}|\frac{a_{k+1}}{a_k}|} $ mit ,,$\frac{1}{0}=\infty$" 	
+	\end{itemize}
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Cauchy-Produkt}
+	Seien $(a_k),(b_l)$ Folgen, das Cauchy-Produkt $c=a*b$ ist die neue Folge $c_m = \sum\limits_{k=0}^{m}a_k b_{m-k}$\\ \\
+	Konvergieren die Reihen von $\alpha,\beta$ absolut, konvergiert auch  $\sum_{m}^{\infty}(\alpha * \beta)$ absolut und es gilt: \\
+	$\sum\limits_{m=0}^{\infty}(\alpha * \beta)_m =(\sum\limits_{k=0}^{\infty}\alpha_k)(\sum\limits_{l=0}^{\infty}\beta_l)$
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Exponentialfunktion}
+	$exp:\C\rightarrow\C$\\
+	$exp(z)=e^z=\sum\limits_{k=0}^{\infty}\frac{z^k}{k!} \text{ für alle } z \in \C$\\
+	$e^{z+w}=e^ze^w$\\
+	Umkehrfunktion: $ln(xy)=ln(x)+ln(y)$
+	
+\end{sectionbox}
+
+
+\begin{sectionbox}
+	\subsection{Sinus und Cosinus}
+	\begin{itemize}
+		 
+	\item $sin(z):=\frac{e^{iz}-e^{-iz}}{2i}=\sum\limits_{k=0}^{\infty}(-1)^k \frac{z^{2k+1}}{(2k+1)!}$
+\item	$cos(z):=\frac{e^{iz}+e^{-iz}}{2}=\sum\limits_{k=0}^{\infty}(-1)^k \frac{z^{2k}}{(2k)!}$
+		
+	\item \textbf{Eulersche Formel: }$e^{iz}=cos(z)+i \text{ }sin(z)$
+	\item \textbf{trigonometrischer Pythagoras: }$sin^2(z)+cos^2(z)=1$
+	\item \textbf{Paritäten: } $sin(-z)=-sin(z) \text{ und } cos(-z)=cos(z)$
+	\item \textbf{Additionstheoreme:} \begin{align*}
+		sin(z+w) &= sin(z)cos(w)+cos(z)sin(w)\\
+		cos(z+w) &= cos(z)cos(w)-sin(z)sin(w)
+		\end{align*}
+\item \textbf{Ableitungen: } $sin'(x)=cos(x), cos'(x)=-sin(x)$	
+
+	
+	\end{itemize}
+
+		
+		
+
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Sinus und Cosinus Hyperbolicus}
+	\begin{itemize}
+		\item $sinh(z):=-i \text{  } sin(iz)=\frac{e^z-e^{-z}}{2}$
+		\item $cosh(z):=cos(iz)=\frac{e^z+e^{-z}}{2}$
+	    \item \textbf{hyperbolischer Pythagoras: }$cosh^2(z)-sinh^2(z)=1$
+	    \item \textbf{Paritäten: } $sinh(-z)=-sinh(z) \text{ und } cosh(-z)=cosh(z)$
+     	\item \textbf{Additionstheoreme:} \begin{align*}
+		sinh(z+w) &= sinh(z)cosh(w)+cosh(z)sinh(w)\\
+		cosh(z+w) &= cosh(z)cosh(w)+sinh(z)sinh(w)
+		\end{align*}
+		\item \textbf{Ableitungen: } $sinh'(x)= cosh(x), cosh'(x) = sinh(x)$
+
+	\end{itemize}
+
+\end{sectionbox}
+
+
+
+
+
+\section{Stetigkeit}
+
+\begin{sectionbox}
+	\subsection{Definition}
+	$f:\X \rightarrow \Y \text{ heißt stetig am Punkt } a\in \X \text{ und stetig wenn }f \text{  } \forall a \in \X \text{ stetig ist.}$\\ \\
+	$\forall \mathcal{E}>0 \text{  } \exists \delta >0 \text{  } \forall x \in \X : |x-a|<\delta \Rightarrow |f(x)-f(a)|< \mathcal{E}$
+
+	
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Folgenstetigkeit}
+	Sei $(x_n)$ eine gegen $x$ konvergente Folge.$f$ ist genau dann stetig, wenn\\ \\
+	$\lim \limits_{n \to \infty}f(x_n) = f(\lim \limits_{n \to \infty} x_n) = f(x)$
+
+\end{sectionbox}
+
+
+\begin{sectionbox}
+	\subsection{Lipschitz-Stetigkeit}
+	$f:\X \rightarrow \Y$ ist Lipschitz-stetig wenn ein $L \in \R_{>0}$ existiert sodass $\forall x_1,x_2 \in \X$\\
+	$|f(x_1)-f(x_2)| \le L |x_1-x_2|$\\
+	und heißt lokal Lipschitz-stetig, wenn es zu jeder kompakten Menge $K \subset X$ eine lokale Lipschitz-Konstante $L$ gibt, die obiges erfüllt.
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Grenzwert von Funktionen}
+	Für $f:\X \backslash \{a\} \rightarrow \Y, \text{ ist } y \in \Y $ der Grenzwert falls für alle Folgen $(x_n)$ die gegen $a$ konvergieren gilt $\lim \limits_{x \to a}f(x)=y$
+	%Sei $(x_n)$ jede beliebige gegen $a$ konvergent Folge
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Satz vom Minimum und Maximum}
+	Seien $f : \X \rightarrow \R$ eine stetige reelle Funktion und $A \subset X$ kompakt. Dann existieren $x_{min},x_{max} \in A$ mit $f(x_{max}) = \text{max} (f(A)) \text{ und } f(x_{min}) = \text{min} (f(A))$.
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Zwischenwertsatz}
+	Es sei $f : [\alpha,\beta] \rightarrow \R$ eine stetige Funktion mit $f(\alpha) < f(\beta)$. Weiter sei $y \in [f(\alpha),f(\beta)]$ . Dann existiert ein $x_y \in [\alpha,\beta]$ mit $f(x_y) = y$.
+
+\end{sectionbox}
+
+
+\begin{sectionbox}
+	\subsection{Punktweise Konvergenz von Funktionenfolgen}
+	Die Funktionenfolge $f_n : \X \rightarrow \Y$ heißt punktweise konvergent gegen eine Funktion $f : \X \rightarrow \Y$ wenn für alle $x \in X$ gilt: $\lim \limits_{n \to \infty} f_n(x)=f(x)$
+	
+	\end{sectionbox}
+
+
+\begin{sectionbox}
+	\subsection{Gleichmäßige Konvergenz von Funktionenfolgen}
+	Eine Folge $(f_n)$ von Funktionen $f_n : \X \rightarrow \Y$ konvergiert
+gleichmäßig  gegen eine Funktion $f : \X \rightarrow \Y$ , falls \\
+	$\forall \mathcal{E}>0 \text{  } \exists N \in \R \text{   } \forall n > N \text{   } \forall x \in \X: |f_n(x)-f(x)|<\mathcal{E}$\\
+	$\Leftrightarrow \lim \limits_{n \to \infty} ||f_n-f ||_\infty = 0$
+
+
+\end{sectionbox}
+\begin{sectionbox}
+	\subsection{Stetigkeit von Grenzwertfunktionen}
+		Konvergiert die Folge $(f_n)$ stetiger Funktionen $f_n : \X \rightarrow \Y$ gleichmäßig gegen $f :\X \rightarrow \Y$, so ist $f$ stetig.
+
+\end{sectionbox}
+
+
+
+
+\section{Differenzierbarkeit}
+
+\begin{sectionbox}
+	\subsection{Differentialquotient}
+	$f: I \rightarrow \C$ ist differenzierbar bei $x_* \in I $ wenn der Grenzwert existiert \\
+	$f'(x*)= \lim \limits_{x \to x_*} \frac{f(x)-f(x_*)}{x-x_*}$
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Differenzierbar impliziert Stetig}
+	Ist $f: I \rightarrow \C$ differenzierbar bei $ x_* \in I$ dann ist f auch stetig bei $x_*$ \\
+	($\neg$ Stetig $\Rightarrow \neg$ Differenzierbar)
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Ableitungsregeln}
+	\begin{itemize}
+		\item \textbf{Linearität: } $(\lambda f + \mu g)'(x)=\lambda f'(x) + \mu g'(x)$
+		\item \textbf{Produktregel: } $(fg)'(x)=f'(x)g(x)+f(x)g'(x)$
+		\item \textbf{Quotientenregel: } $(\frac{f}{g})'(x)= \frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}$
+		\item \textbf{Kettenregel: } $(f \circ g)'(x)=f'(g(x))g'(x)$
+	\end{itemize}
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Ableitung der Umkehrfunktion}
+	Sei $g $ eine stetige, streng monotone Funktion und $f $ die Umkehrfunktion. Wenn $g$ an der Stelle $y_* := f(x_*)$ differenzierbar ist mit $g′(y_*) \neq 0$, dann ist $f$ bei $x_*$ differenzierbar mit $f'(x_*)=\frac{1}{g'(y_*)}=\frac{1}{g'(f(x_*))}$
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Mittelwertsatz der Differentialrechnung}
+	Ist $f : [a, b] \rightarrow \R$ eine stetige, auf $(a, b)$ differenzierbare Funktion. Dann existiert ein $\xi \in  (a, b)$ mit \\
+	$f'(\xi)= \frac{f(b)-f(a)}{b-a}$
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Monotonie von Funktionen}
+	Sei $f : [a, b] \rightarrow \R$ stetig und auf $(a, b)$ differenzierbar. $\forall x \in (a, b)$ gilt:
+	\begin{itemize}
+		\item $f$ ist monoton steigend genau dann, wenn $f'(x)\ge0$ (für streng >)
+		\item $f$ ist monoton fallend genau dann, wenn $f'(x) \le 0$ (für streng <)
+		\item $f$ ist konstant genau dann, wenn $f'(x) = 0$ 
+	\end{itemize}
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Regel von l'Hôpital}
+	Seien $a, b \in \R \cup \{-\infty , \infty \}$. Und $f, g : (a, b) \rightarrow \R$ zwei differenzierbare Funktionen. Sei $g′(x) \neq 0$ für alle $x \in [a,b]$, und es existiere der Limes:\\
+	$\lim \limits_{x \to a} \frac{f'(x)}{g'(x)}=: c \in \R $ 
+	\begin{enumerate}
+		\item Falls $\lim\limits_{x \to a} f (x) = \lim \limits_{x \to a} g(x) = 0$ gilt: $\lim\limits_{x \to a} \frac{f(x)}{g(x)}= c$
+		\item Falls $\lim\limits_{x \to a} f (x) = \lim \limits_{x \to a} g(x) = \pm \infty$ gilt: $\lim\limits_{x \to a} \frac{f(x)}{g(x)}= c$
+	\end{enumerate}
+
+\end{sectionbox}
+
+%\begin{sectionbox}
+%	\subsection{Bekannte Ableitungen}
+	
+%\end{sectionbox}
+
+
+\begin{sectionbox}
+	\subsection{Satz 8.28}
+	Es sei $(f_n)_{n \in \N}$ eine Folge differenzierbarer Funktionen $f_n : [a, b] \rightarrow \C$. Wir nehmen an, dass 
+	\begin{itemize}
+		\item die Funktionenfolge $(f'_n)_{n \in \N}$ der Ableitungen $f'_n : [a, b] \rightarrow \C$ gleichmäßig gegen ein $ g : [a, b] \rightarrow \C$ konvergiert
+		\item die Zahlenfolge $(f_n(\overline{x}))_{n \in \N}$ für mindestens ein $\overline{x} \in  [a, b]$ konvergiert
+	\end{itemize}
+	Dann konvergiert die Funktionenfolge $(f_n)_{n \in \N}$ gleichmäßig gegen eine differenzierbare Funktion $f : [a,b] \rightarrow \C$, und es gilt $f' = g$. Ist zusätzlich jede Funktion $f_n$ stetig differenzierbar, so ist auch $f$ stetig differenzierbar.
+
+\end{sectionbox}
+ 
+\begin{sectionbox}
+	\subsection{Taylor-Polynom}
+	Taylor-Polynom für $f \in C^n(I)$, Grad $m \in \N$ und $m \le n$, an der Entwicklungsstelle $y \in I$:\\
+	$T_m^f(y;x)= \sum \limits_{k=0}^{m} \frac{f^{(k)}(y)}{k!}(x-y)^k$
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Restgliedformel nach Lagrange}
+	Es seien $f \in C^{m+1}([a, b]; \R)$ und $x \in [a, b]$ gegeben. Dann existiert zu jedem $x \in [a,b]$ mit $x \neq y$ ein $\xi \in (a,b)$ ”echt zwischen“ $y$ und $x$ so dass\\
+	$f(x)=T_m^f(y;x)+\frac{f^{(m+1)}(\xi)}{(m+1)!}(x-y)^{(m+1)}$
+
+\end{sectionbox}
+
+
+\section{Integralrechnung}
+
+\begin{sectionbox}
+	\subsection{Jede stetige Funktion ist eine Regelfunktion }
+	Eine Folge von Treppenfunktionen $(\phi_n)_{n \in \N}$, die gleichmäßig gegen $f$ konvergiert, ist gegeben durch
+	$\phi_n(x) = f(x_k^{(n)})$  für alle $x \in (x_{k-1}^{(n)} ,x_k^{(n)}]$, sowie $\phi_n(a) = f(a)$, wobei $(x_k^{(n)})_{k=0}^{n}$  mit $x_k^{(n)}=a+(b-a) \frac{k}{n}$ eine Zerlegung von $[a,b]$ ist. 
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Rechenregel für Integrale}
+	Es seien $f, g : [a, b] \rightarrow \C$ Regelfunktionen und $\lambda, \mu \in \C$. Dann gilt:
+	\begin{enumerate}
+		\item Auch $\lambda f + \mu g : [a, b] \rightarrow \C$ ist eine Regelfunktion, und das Integral ist linear:\\ $\int \limits_a^b (\lambda f +\mu g)(x)dx= \lambda \int \limits_a^b f(x) dx + \mu \int \limits_a^b g(x)dx$
+		\item Auch $|f| : [a, b] \rightarrow \R$ ist eine Regelfunktion:\\
+		  	$|\int \limits_a^b f(x)dx | \le \int \limits_a^b |f(x)|dx \le \sup\limits_{a \le x \le b}|f(x)|$
+		\item Sind $f, g$ reellwertig mit $f \le g$ dann:\\ $\int \limits_a^b f(x)dx \le \int \limits_a^b g(x)dx$
+	\end{enumerate}
+\end{sectionbox}
+\begin{sectionbox}
+	\subsection{Hauptsatz der Differential und Integralrechnung}
+	
+	Es sei $f : [a,b] \rightarrow \C$ eine stetige Funktion. Zu gegebenem $a \in [\alpha, \beta]$ definieren wir die Funktion $F : [a, b] \rightarrow \C$ durch: 
+	\begin{itemize}
+		\item $F(x)= \int \limits_a^x f(t)dt $
+		\item $\int \limits_a^b f(t)dt = F(b)-F(a)$
+	\end{itemize}
+	Es gilt $F'(x)=f(x)$
+	
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Partielle Integration}
+	Es seien $f,g : [a,b] \rightarrow \C$ zwei stetig differenzierbare Funktionen. Dann gilt:\\
+$	\int \limits_a^b f'(x)g(x)dx = \left.f(x)g(x) \right|_a^b - \int \limits_a^b f(x)g'(x)dx$
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Substitutionsregel}
+	Es sei $f : [a,b] \rightarrow \C$ eine stetige Funktion mit Stammfunktion $F : [a,b] \rightarrow \C$. Weiter sei $g : [\alpha,\beta] \rightarrow [a,b]$ eine stetig differenzierbare Funktion.\\
+	$\int \limits_\alpha^\beta f(g(t))g'(t)dt = \int \limits_{g(\alpha)}^{g(\beta)} f(x)dx = \left.F(x) \right|_{g(\alpha)}^{g(\beta)} $
+	
+	
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Uneigentliches Integral}
+	Ist $f : [a,b) \rightarrow \C$ mit $b \in  \R \cup \{+ \infty\}$(für $-\infty$ analog) eine uneigentliche Regelfunktion,  dann ist folgender Limes das uneigentliche Integral wenn er existiert :\\
+	$\int \limits_a^b f(x)dx := \lim \limits_{c \to b} \int \limits_a^c f(x)dx$
+	
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Satz  9.34}
+	Es seien $f : [a, b) \rightarrow \C$ und $g : [a, b) \rightarrow \R$ uneigentliche Regelfunktionen. Gilt $|f| \le  g$, und ist $g$ uneigentlich integrierbar, so ist auch $f$ uneigentlich integrierbar. Insbesondere ist jede absolut integrierbare Funktion $f : [a, b) \rightarrow \C$ auch uneigentlich integrierbar.
+
+\end{sectionbox}
+
+%\begin{sectionbox}
+%	\subsection{Satz9.44}
+
+%\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Restgliedformel für Integrale}
+	Es seien $f \in C^{m+1}([a,b];\R)$ und $y \in [a,b]$ gegeben. Wir definieren das Taylorpolynom $T_m^f (y; x) : [a, b] \rightarrow \R$ wie in Definition 8.33. Dann gilt für jedes $x \in [a, b]$:\\
+	$f(x)=T_m^f(y;x)+ \int \limits_{y}^x \frac{(x-t)^m}{(m)!}f^{(m+1)}(t)dt$
+	
+
+\end{sectionbox}
+
+
+
+
+
+\section{Konvexe Funktionen}
+
+\begin{sectionbox}
+	\subsection{Definition durch Stützebenen/Tangenten}
+	Sei $f:I \rightarrow \R \in C^1$ eine konvexe Funktion, $a \in I$ und $x \neq a$ dann gilt:\\
+	$f(x) \ge f(a)+f'(a)(x-a)$	[Für strikt konvex gilt $<$]
+	\end{sectionbox}
+
+
+			
+
+
+
+
+\begin{sectionbox}
+	\subsection{Definition durch Sekanten}
+	Sei $f:I \rightarrow \R$ eine konvexe Funktion, für $(a<b) \in I$ und $\lambda \in [0,1] $ gilt:\\
+	$f(\lambda b+ (1-\lambda)a) \le \lambda f(b)+ (1-\lambda)f(a) $
+
+\end{sectionbox}
+
+
+
+\begin{sectionbox}
+	\subsection{Konvexität und Ableitung}
+	Sei $f \in C^2(I)$. $f$ ist (strikt) konvex:\\
+	$\Rightarrow f'$ ist (streng) monoton steigend\\
+	$\Leftrightarrow f'' \ge 0$ Für strikt konvex folgt \underline{nicht} $>$
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Jensensche Ungleichung}
+	Ist $f: I \rightarrow \R$ eine konvexe Funktion, Argumente $x_1,...,x_n \in I$ und Koeffizienten $\lambda_1,...,\lambda_n \in  \R_{>0}$ gegeben, mit der Eigenschaft  $\sum \limits_{k=1}^{n} \lambda_k = 1$ gilt:\\
+	$f(\sum \limits_{k=1}^{n} \lambda_k x_k)\le \sum \limits_{k=1}^{n} \lambda_k f(x_k) $
+
+\end{sectionbox}
+
+
+
+\begin{sectionbox}
+	\subsection{Vergleich von arithmetischem und geometrischem Mittel}
+	Seien $A_1, A_2, . . . , A_n \in R_{ \ge 0}$ dann gilt:\\
+	$\sqrt[n]{\prod \limits_{k=1}^{n}} A_k \le \frac{1}{n} \sum \limits_{k=1}^{n} A_k$ Gleicheit nur für $A_1=A_2=...=A_n$
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Jensensche Integral Ungleichung}
+	
+	Es seien $f : [a, b] \rightarrow I , \Lambda : [a, b] \rightarrow R_{>0}$ stetige Funktionen mit  $ \int \limits_{a}^{b} \Lambda(x) dx = 1$, und $g : I \rightarrow \R$ sei konvex.\\
+	$g(\int \limits_{a}^{b}f(x)\Lambda (x)dx) \le \int \limits_{a}^{b}g(f(x))\Lambda (x)dx$\\
+	Ist $g$ strikt konvex, so gilt Gleichheit genau dann, wenn $f$ eine konstante Funktion ist.
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Youngsche Ungleichung}
+	 Seien $A, B \ge 0 $ und $p, q > 1$ mit $ \frac{1}{p}+\frac{1}{q}=1$
+  Dann gilt:\\
+	 $AB \le \frac{A^p}{p}+\frac{B^q}{q}$
+
+\end{sectionbox}
+
+\begin{sectionbox}
+	\subsection{Höldersche Ungleichung}
+	Es seien $p, q > 1$ gegeben mit $ \frac{1}{p}+\frac{1}{q}=1$.
+  Für beliebige stetige Funktionen $f, g : [a, b] \rightarrow \C$ gilt dann:\\
+	$|\int \limits_{a}^{b} f(x)g(x)dx| \le (\int \limits_{a}^{b} |f(x)|^pdx)^{\frac{1}{p}} (\int \limits_{a}^{b} |g(x)|^qdx)^{\frac{1}{q}}$
+
+\end{sectionbox}
+
+\section{Bekannte Ableitungen/Stammfunktionen}
+	\begin{sectionbox}
+		\subsection{Ableitungen}
+		\begin{itemize}
+			\item $sin'(x)=cos(x), arcsin'(x)=\frac{1}{\sqrt{1-y^2}}$
+			\item  $cos'(x)=-sin(x), arccos'(x)=-\frac{1}{\sqrt{1-y^2}}$
+
+			\item $tan(x):=\frac{sin(x)}{cos(x)}$, $tan'(x)=1+(tan(x))^2=\frac{1}{(cos(x))^2}$
+			\item $arctan'(x)=\frac{1}{1+y^2}$
+		\end{itemize}
+		\subsection{Stammfunktionen}
+		\begin{itemize}
+			\item $\int tan(x)dx=-ln(|cos(x)|)$
+			\item $\int ln(x)dx=ln(x)x-x$
+		\end{itemize}
+	\end{sectionbox}
+
+\section{Eigene Notizen:}
+
+
+
+
+% ======================================================================
+% End
+% ======================================================================
+\end{document}
