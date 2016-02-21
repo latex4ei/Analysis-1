@@ -41,6 +41,9 @@
 $\ma A \in \R^2: \det \ma A \widehat = $ Fläche Parallelogram!\\
 $\ma A \in \R^3: \det \ma A \widehat = $ Volumen Spat.!\\
 
+EV: Eigenvektor, EW: Eigenwert, ONB: Orthonormalbasis
+LGS: Lineares Gleichungs System
+iff: if and only if $\Leftrightarrow$
 
 \begin{sectionbox}
 	\subsection{Mengen}
@@ -382,7 +385,7 @@ regulär, falls $\forall t \in [a,b]:\dot \gamma(t) \ne \vec 0$ (Keine Knicke), 
 	Hat $\ma A$ 2 linear abhäng. Zeilen/Spalten $\Rightarrow |\ma A|=0$ \\
 	Entwicklung. n. $j$ter Spalte: $|\ma A|=\sum\limits_{i=1}^n (-1)^{i+j} \cdot a_{ij} \cdot |\ma A_{ij}|$\\
 
-	\subsubsection{Eigenwerte $\lambda$ und Eigenvektoren $\underline v$}
+	\subsubsection{Eigenwerte (EW) $\lambda$ und Eigenvektoren (EV) $\underline v$}
 	\begin{emphbox}
 		\large $\ma A \vec v = \lambda \vec v$ \quad\ $\det \ma A = \prod \lambda_i$ \quad\ $\Sp \ma A = \sum a_{ii} = \sum \lambda_i$
 	\end{emphbox}
@@ -420,17 +423,18 @@ regulär, falls $\forall t \in [a,b]:\dot \gamma(t) \ne \vec 0$ (Keine Knicke), 
 		\item Dreiecksungleichung: $\norm{\mathcal X + \mathcal Y} \leq \norm{\mathcal X} + \norm{\mathcal Y}$
 	\end{enumerate}
 
-		\subsubsection[Vektornormen]{Vektornormen: ($\vec x \in \K^n, \sum$ von $i=0$ bis $n$)}
+		\subsubsection[Vektornormen]{Vektornormen: ($\vec x \in \K^n, \sum$ von $i=1$ bis $n$)}
 		\begin{tablebox}{l@{\ }ll@{\ }l}
 			Summen & $\norm{\vec x}_1 = \sum |x_i|$ & Euklidische & $\norm{\vec x}_2 = \sqrt{\sum |x_i|^2}$\\
 			Maximum & $\norm{\vec x}_\infty = \max |x_i|$ & Alg. p-Norm & $\norm{\vec x}_p = \left( \sum |x_i|^p \right)^{1\!/\!p}$\\		
 		\end{tablebox}
 
 
-	\subsubsection[Matrixnormen]{Matrixnormen ($\ma A \in \K^{m \times n}, i\in[0,m], j\in[0,n]$)}
-	Für Matrixnormen gilt zu den 3 Standard Axiomen zusätzlich:
+	\subsubsection[Matrixnormen]{Matrixnormen ($\ma A \in \K^{m \times n}, i\in[1,m], j\in[1,n]$)}
+	Für Matrixnormen gilt meistens zu den 3 Standard Axiomen:
 	\begin{enumerate} \setcounter{enumi}{3}
 		\item Submultiplikativität: $\norm{\ma A + \ma B} \leq \norm{\ma A} \cdot \norm{\ma B}$
+		\item Veträglichkeit mit Vektornorm: $\norm{\ma A \vec v}_V \leq \norm{\ma A} \cdot \norm{\vec v}_V$
 	\end{enumerate}
 
 	\begin{tablebox}{lr@{ = }l}
@@ -440,6 +444,9 @@ regulär, falls $\forall t \in [a,b]:\dot \gamma(t) \ne \vec 0$ (Keine Knicke), 
 	$\underset{\text{euklidische Norm}}{\text{Frobeniusnorm}}$ $(||\ma{I}||_E = \sqrt{n})$ & $\norm{\ma{A}}_E$ & $\sqrt{\sum\limits_{i=1}\sum\limits_{j=1}\abs{a_{ij}}^2}$\\
 	Spektralnorm, Hilbertnorm & $\norm{\ma{A}}_\lambda$ & $\sqrt{\lambda_\text{max}(\ma{A}^\top\cdot\ma{A})}$\\
 	\end{tablebox}
+
+	\textbf{natürlich} bzw. \textbf{induziert} durch eine Vektornorm $\norm{.}_V$ des $\mathbb K^n$, falls\\
+	$\norm{\ma A} := \sup \frac{\norm{\ma A\vec v}_V}{\norm{\vec v}_V} \qquad V \in \mathbb K^n \setminus \{0\} \qquad \norm{\ma 1_n}=1$
 \end{sectionbox}
 
 
@@ -504,6 +511,11 @@ regulär, falls $\forall t \in [a,b]:\dot \gamma(t) \ne \vec 0$ (Keine Knicke), 
 
 \begin{sectionbox}
 	\subsection{Partialbruchzerlegung}
+	Gegeben: rationale Funktion $f(x) = \frac{g(x)}{h(x)}$ mit Polynomen $g(x),h(x)$\\
+	Gesucht: $f(x) = P(x) + \frac{Z(x)}{N(x)} = P(x) + \sum\limits_{i=1}^n \frac{A_i}{(x-x_i)^{r_i}}$\\
+	$N(x)$ hat $n$ verschiedene Nullstellen, die jeweils $r_i$-fach vorkommen und $m$ verschiedene komplexe NS, die jeweils $s$-fach vorkommen.\\
+	1. Ansatz: \\$N^*(x) = \sum\limits_{i = 1}^n \sum\limits_{k = 1}^{r_i} \frac{A_{ik}}{(x-x_i)^k} + \sum\limits_{i = 1}^m \sum\limits_{k = 1}^{s_i} \frac{B_{ik} x + C_{ik}}{(x-\cx z_i)^k(x-\ol{\cx z}_i)^k}$\\
+	2. Koeffizientenvergleich: löse $Z(x) = N^*(x) \cdot N(x)$ nach $A_{ik}$
 \end{sectionbox}
 
 
@@ -526,7 +538,16 @@ regulär, falls $\forall t \in [a,b]:\dot \gamma(t) \ne \vec 0$ (Keine Knicke), 
 % ============================================================================================
 
 \begin{sectionbox}
-	\subsection{Fouriertransformation}
+	\subsection{Fourierreihe}
+	pproximation einer \emph{periodischen} Funktion $f(t)$ durch Überlagerung gewichteter Sinus und Cosinus einer Grundfrequenz $\omega_0 = \frac{1}{T}$ und deren Oberschwingungen $2\omega_0, 3\omega_0, ...$
+	\begin{emphbox}
+		$F(x) = \sum\limits_{k=-\infty}^\infty c_k e^{\i k \omega_0 x} \qquad c_k = \frac{1}{T} \int\limits_{-\frac{T}{2}}^{\frac{T}{2}} f(x) e^{\i k \omega_0 x} \diff x$
+	\end{emphbox}
+\end{sectionbox}
+
+
+\begin{sectionbox}
+	\subsection{Fouriertransformation (FT)}
 	\begin{emphbox}
 		$\displaystyle \underset{\text{Zeitbereich}}{\large f(t)} \FT \underset{\text{Frequenzspektrum}}{\large F(\omega)} := \int\limits_{-\infty}^\infty f(t) \exp(-\i \omega t) \diff t$
 	\end{emphbox} 
@@ -536,12 +557,30 @@ regulär, falls $\forall t \in [a,b]:\dot \gamma(t) \ne \vec 0$ (Keine Knicke), 
 
 
 \begin{sectionbox}
-	\subsection{Laplaceransformation}
+	\subsection{Laplaceransformation (LT) $\cx s = α + ω\i$}
+	LT ist Verallgemeinerung der FT mit Dämpfungsfaktor $α$
 	\begin{emphbox}
-		$\displaystyle \underset{\text{Zeitbereich}}{\large f(t)} \LT \underset{\text{Frequenzspektrum}}{\large F(s) = \mathcal L\left(f(t)\right)} := \int\limits_{0}^\infty f(t) \exp(- s t) \diff t$
+		$\displaystyle \underset{\text{Zeitbereich}}{\large f(t)} \LT \underset{\text{Frequenzspektrum}}{\large F(\cx s) = \mathcal L\left(f(t)\right)} := \int\limits_{0}^\infty f(t) \exp(- \cx s t) \diff t$
 	\end{emphbox} 
 \end{sectionbox}
 
+
+\begin{sectionbox}
+	\subsection{Eigenschaften der FT ($s = \i \omega$) / LT ($s = \alpha + \i \omega$)}
+	\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}ll@{}}
+	Linearität: & $\alpha f(t) + \beta g(t) \ftsymbol \alpha F(s) + \beta G(s)$\\
+	Zeitverschiebung: & $x(t - \tau) \ftsymbol e^{-s \tau} X(x)$\\
+	Frequenzverschiebung & $e^{\tau t} \ftsymbol X(s - \tau)$\\
+	Stauchung & $f(ct) \ftsymbol \frac{1}{\abs{c}} F\bigl(\frac{s}{c}\bigr)$\\
+	Ableitung & $f^{(n)}(t) \ftsymbol s^n F(s)$\\
+	Integral & $\int_{-\infty}^t \tau \diff \tau \ftsymbol \frac{1}{s} X(s)$\\
+	Faltung: & $(f * g)(t) \ftsymbol F(s) \cdot G(s)$\\
+	 & 
+	\end{tabular*}\\
+	$f(t)$ gerade: $F(\omega)$ reel, gerade\\
+	$f(t)$ ungerade: $F(\omega)$ imaginär, ungerade
+
+\end{sectionbox}
 
 
 % SECTION ====================================================================================
@@ -586,6 +625,23 @@ regulär, falls $\forall t \in [a,b]:\dot \gamma(t) \ne \vec 0$ (Keine Knicke), 
 	Erhalte Ortho\textbf{normal}system durch $\vec b_i' = \vec b_i/\norm{\vec b_i}$\\
 	QR-Zerlegung: $\ma A = \ma Q \ma R$ mit $\ma Q = \big[\vec b_1', ... , \vec b_n'\big]$ \quad $\ma R = \ma Q^\top \ma A$
 \end{sectionbox}
+
+
+\begin{sectionbox}
+	\subsection[Singulärwertszerlegung]{Singulärwertszerlegung $\ma A ∈ \K^{m \times n} = \ma U \ma{Σ} \ma V^\top$}
+	Zerlegung in zwei Rotationen und eine Streckung:\\
+	$\ma U∈\K^{m\times m}, \ma V∈\K^{n\times n}$: orthonormale Rotationsmatrizen\\
+	$\ma{Σ}∈\K^{m\times n}$: $\ma 1\vec{σ}$ ergänzt mit 0en damit $\dim \ma{Σ} = \dim \ma A$
+
+	\begin{cookbox}{Singulärwertszerlegung}
+		\item Bestimme $n$ EW $\lambda_i$ von $\ma A^\top \ma A$, sortiere $\lambda_1 \ge ... \ge \lambda_n \ge 0$\\ Erhalten $n$ Singulärwerte $σ_i = \sqrt{λ_i}$
+		\item Bestimme ONB $\ma V = [\vec v_1,... , \vec v_n]$ aus EV von $\ma A^\top \cdot \ma A$
+		\item Bestimme ONB $\ma U = [\vec u_1,... , \vec u_k]$ mit $\vec u_i =\frac{1}{\sigma_i}\ma A \vec v_i$\\ $k= \min(m,n)$, falls $n < m$: Ergänze $\ma U$ zu ONB des $\K^m$
+		\item Berechne $\underset{m \times n}{\ma \Sigma}  = \underset{m \times m}{\ma U^\top} \cdot \underset{m \times n}{\ma A} \cdot \underset{n \times n}{\ma V}$ \quad ($\ma U, \ma V$ sind orthogonal)
+	\end{cookbox}
+\end{sectionbox}
+
+
 
 % DOCUMENT_END =================================================================
 \end{document}
