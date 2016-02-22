@@ -48,8 +48,7 @@ iff: if and only if $\Leftrightarrow$
 \begin{sectionbox}
 	\subsection{Mengen}
 	Eine Zusammenfassung wohlunterschiedener Elemente zu einem Ganzen.
-	Explizite Angabe: $A=\{1;2;3\}$\\
-	Angabe durch Eigenschaft: $A=\{n\in \N\ \vert\ 0<n<4\}$\\
+	Explizite: $A=\{1;2;3\}$ \quad Implizit: $A=\{n\in \N\ \vert\ 0<n<4\}$\\
 
 	\subsubsection{Mengenregeln}
 	\begin{tablebox}{lll}
@@ -70,17 +69,10 @@ iff: if and only if $\Leftrightarrow$
 
 
 	\subsubsection{Wichtige Mengen}
-	\begin{tablebox}{rll}
-		$\emptyset$ & $=\{ \}$ & Leere Menge\\
-		$\mathbb N$ & $=\{1,2,3,4,5,\dotsc\}$ & Natürliche Zahlen \\
-		$\mathbb Z$ & $=\{\dotsc ,-2,-1,0,1,2,\dotsc\}$ & Ganze Zahlen \\
-		$\mathbb Q$ & $=\iset {\frac m n}{  m \in \mathbb Z, n \in \mathbb N }$ & Rationale Zahlen\\
-		$\mathbb R$ & $=\{\dotsc ,-\sqrt{2},\dotsc,0,\dotsc,\pi,\dotsc\}$ & Reele Zahlen\\	
-		$\mathbb C$ & $=\mathbb R^2$ & Komplexe Zahlen\\
-		$\mathbb B$ & $=\{ 0,1 \}$ & Binäre Zahlen\\		
-		$\mathbb S$ & $=\{ -1,0,1 \}$ & Vorzeichenmenge\\	
-		$\mathcal K[x]$ & & Polynomring\\ 		
-	\end{tablebox}
+	Leere Menge $\emptyset = \{ \}$, Natürliche Zahlen $\N = \{1,2,3,...\}$\\
+	Ganze Zahlen $\Z = \{...,-2,-1,0,1,2,...\}$ \\
+	Rationale Zahlen $\mathbb Q = \iset {\frac m n}{  m \in \mathbb Z, n \in \mathbb N }$\\
+	Reele Zahlen $\R = \{... ,-\sqrt{2},...,\pi,...\}$, Komplexe Zahlen $\C = \R^2$
 \end{sectionbox}
 
 
@@ -111,7 +103,7 @@ iff: if and only if $\Leftrightarrow$
 \end{sectionbox}
 
 
-
+\begin{sectionbox}
 \subsection{Komplexe Zahlen $a + b\i = \cx z \in \C = \R^2$}
 % ----------------------------------------------------------------------
 $\cx z$ mit Realteil $\Re{\cx z}=a \in \R$ und Imaginärteil $\Im{\cx z}=b \in \R$\\
@@ -120,30 +112,19 @@ $\cx z$ mit Realteil $\Re{\cx z}=a \in \R$ und Imaginärteil $\Im{\cx z}=b \in \
 	$\cx z = \underset{\text{Karthesisch}}{a + b\i} = \underset{\text{Polarkoord.}}{r \cdot e^{\i \varphi}}$ \quad\ \boxed{ \underset{\text{Imaginäre Einheit}}{\i = \sqrt{-1}}}\\[0.4em] 
 	$\i^{2n} = -1^n$ \quad\ $\i^{2n+1} = -\i^n$ \quad\ $\i^{-1} = -\i$ \\[0.2em] 
 	Konjugiert: $\ol{\cx z} = a - b\i$ \qquad $e^{\overline{iφ}} = e^{-iφ}$ \\ $\cx z \ol{\cx z} = \abs{\cx z}^2 = a^2+b^2$\\[0.2em]
-	$\cx z_1 \cdot \cx z_2 = r_1 \cdot r_2 \cdot e^{\i (\varphi_1 + \varphi_2)}$\\[0.2em]
-	Inverse $z^{-1} = \frac{\ol{\cx z}}{\ol{\cx z} \cx z}=\frac{a - b\i}{a^2+b^2}$ }
-
-
-Es gilt: \quad $i^2 = -1$ \quad $i^4 = 1$
-\subsubsection{Kartesische Koordinaten}
-Rechenregeln:\\
-$z_1+z_2=(a_1+a_2)+(b_1+b_2)\mathbf{i}$\\
-$z_1\cdot z_2=(a_1\cdot a_2-b_1\cdot b_2)+(a_1\cdot b_2+a_2\cdot b_1)\mathbf{i}$\\
-
-
-\subsubsection{Polarkoordinaten}
-$z=a+b\mathbf{i}\ne0$\ in Polarkoordinaten:\\
-$z=r (\cos(\varphi)+\mathbf{i}\sin(\varphi))=r\cdot e^{\varphi \mathbf{i}}$\\
-$r=|z|=\sqrt{a^2+b^2}\quad\varphi=\arg(z)=\begin{cases}+\arccos \left( \frac{a}{r}\right),  & b\ge0   \\  -\arccos \left( \frac{a}{r}\right), & b<0\end{cases}$
+	$\cx z_1 \cx z_2 = (a_1a_2-b_1b_2) + (a_1b_2+a_2b_1)\i$\\[0.2em]
+	%r_1 \cdot r_2 \cdot e^{\i (\varphi_1 + \varphi_2)}$\\[0.2em]
+	Inverse $\cx z^{-1} = \frac{\ol{\cx z}}{\ol{\cx z} \cx z}=\frac{a - b\i}{a^2+b^2}$ }
+\textbf{Polarkoordinaten:} $\cx z = r \cdot (\cos(\varphi)+\mathbf{i}\sin(\varphi))=r\cdot e^{\varphi \mathbf{i}}$\\
+$r=|\cx z|=\sqrt{a^2+b^2}\quad\varphi=\arg(\cx z)=\begin{cases}+\arccos \left( \frac{a}{r}\right),  & b\ge0   \\  -\arccos \left( \frac{a}{r}\right), & b<0\end{cases}$
 
 \begin{description}\itemsep0pt
-\item[Multiplikation:] $z_1\cdot z_2=r_1 * r_2 ( \cos ( \varphi_1 + \varphi_2) + \mathbf{i} \sin (\varphi_1 + \varphi_2))$
-\item[Division:] $\frac{z_1}{z_2}=\frac{r_1}{r_2} ( \cos ( \varphi_1 - \varphi_2) + \mathbf{i} \sin (\varphi_1 - \varphi_2))$
-\item[n-te Potenz:] $z^n=r^n\cdot e^{n\varphi \mathbf{i}}= r^n (\cos (n \varphi) + \mathbf{i} \sin (n \varphi))$
-\item[n-te Wurzel:] $\sqrt[n]{z}= z_k = \sqrt[n]{r} \left(\cos \left(\frac{\varphi + 2k\pi}{n}\right) + \mathbf{i} \sin \left(\frac{\varphi + 2k\pi}{n}\right)\right) \\ k =0,1, \ldots, n-1$
-\item[Logarithmus:] $\ln(z)=\ln(r) + \mathbf{i}(\varphi + 2k\pi)$ \quad (Nicht eindeutig!)
+\item[Multiplikation:] $\cx z_1\cdot \cx z_2=r_1r_2 ( \cos ( \varphi_1 + \varphi_2) + \mathbf{i} \sin (\varphi_1 + \varphi_2))$
+\item[Division:] $\frac{\cx z_1}{\cx z_2}=\frac{r_1}{r_2} ( \cos ( \varphi_1 - \varphi_2) + \mathbf{i} \sin (\varphi_1 - \varphi_2))$
+\item[n-te Potenz:] $\cx z^n=r^n\cdot e^{n\varphi \mathbf{i}}= r^n (\cos (n \varphi) + \mathbf{i} \sin (n \varphi))$
+\item[Logarithmus:] $\ln(\cx z)=\ln(r) + \mathbf{i}(\varphi + 2k\pi)$ \quad (Nicht eindeutig!)
 \end{description}
-Anmerkung: Addition in kartesische Koordinaten umrechnen(leichter)!
+\end{sectionbox}
 
 
 \begin{sectionbox}
@@ -268,12 +249,20 @@ Anmerkung: Addition in kartesische Koordinaten umrechnen(leichter)!
 		$\sin 2x = 2 \sin x \cos x $  & $\int \sin^2(x) \diff x = \frac12 \bigl(x - \sin(x)\cos(x) \bigr)$\\
 		$\cos 2x = 2\cos^2 x - 1$  & $\int \cos^2(x) \diff x = \frac12 \bigl(x + \sin(x)\cos(x) \bigr)$\\
 		$\sin(x) = \tan(x)\cos(x)$ & $\int \cos(x)\sin(x) = -\frac12 \cos^2(x)$ \\
-	\end{tabular*}\\[1em]
-	\textbf{Sinus/Cosinus Hyperbolicus} $\sinh, \cosh$\\
+	\end{tabular*}
+\end{sectionbox}
+
+
+
+\begin{sectionbox}
+	\subsection{Sinus/Cosinus Hyperbolicus $\sinh, \cosh$ }
+	% \quad \operatorname{arsinh}\ x:= \ln\left(x+\sqrt{x^2+1}\right) \\
 	\begin{tabular*}{\columnwidth}{@{\extracolsep\fill}ll@{}}
-		$\sinh x = \frac{1}{2}(e^x -e^{-x})= - \j \, \sin(\j x)$ & $\cosh^2 x  \bs - \sinh^2 x = 1$\\
-		$\cosh x  = \frac{1}{2}(e^x +e^{-x})= \cos(\j x)$ & $\cosh x + \sinh x = e^{x}$\\
-	\end{tabular*}\\
+	$\sinh x = \frac{1}{2}(e^x -e^{-x})= - \i \, \sin(\i x)$ & $\cosh x + \sinh x = e^{x}$\\
+	$\cosh x  = \frac{1}{2}(e^x +e^{-x})= \cos(\i x)$ & $\cosh^2 x  \bs - \sinh^2 x = 1$\\
+	\end{tabular*}
+	\textbf{Kardinalsinus} $\mathrm{si}(x) = \frac{\sin(x)}{x}$ \qquad genormt: $\sinc(x) = \frac{\sin(\pi x)}{\pi x}$
+
 \end{sectionbox}
 
 
@@ -531,6 +520,11 @@ regulär, falls $\forall t \in [a,b]:\dot \gamma(t) \ne \vec 0$ (Keine Knicke), 
 			${\displaystyle \nabla^\top \bdot \vec f = \sum\limits_{i=0}^n \frac{\partial f_i}{\partial x_i}}$ & \qquad ${\displaystyle\underset{\nabla^\top \cdot (\nabla f)}{\nabla^2 f} = \sum\limits_{i=0}^n \frac{\partial f}{\partial x_i x_i} }$\\
 		\end{tabular}
 	\end{emphbox}
+
+	\begin{tabular*}{\columnwidth}{l@{\extracolsep\fill}l}
+	\textbf{Integralsatz Gauß} & \textbf{Integralsatz Stokes} \\[0.5em]
+	$\displaystyle \iiint\limits_V \div \vec v \diff V = \oiint\limits_{\partial V} \vec v \bdot \diff A$ & $\displaystyle \iint\limits_{A} \rot \vec v \diff A = \oint\limits_{\partial A} \vec v \diff \vec s$\\
+	\end{tabular*}
 \end{sectionbox}
 
 % SECTION ====================================================================================
