@@ -406,10 +406,11 @@ regulär, falls $\forall t \in [a,b]:\dot \gamma(t) \ne \vec 0$ (Keine Knicke), 
 	\subsubsection{Differentiation}
 	$\frac{\partial \vec y}{\partial \vec x^\top} = \left( \frac{\partial \vec y^\top}{\partial \vec x} \right)^\top$\qquad
 	$\frac{\partial \vec x^\top \vec y}{\partial \vec x} = \frac{\partial \vec y^\top \vec x}{\partial \vec x} = \vec y$\\
-	$\frac{\partial \vec x^\top \ma A \vec x}{\partial \vec x} = (\ma A + \ma A^\top)\vec x$
-	$\frac{\partial \vec x^\top \ma A \vec y}{\partial \ma A} = \vec x \vec y^\top$
-	$\frac{\partial \vec x^\top \ma A \vec y}{\partial \ma A} = \vec x \vec y^\top$
-	$\frac{\partial \det( \ma A )}{\partial \ma A} = \det(\ma A) \left( \ma A^{-1} \right)^\top$ \qquad $\frac{\partial \det( \ma B \ma A \ma C )}{\partial \ma A} = \det(\ma B \ma A \ma C) \left( \ma A^{-1} \right)^\top$
+	$\frac{\partial \vec x^\top \ma A \vec x}{\partial \vec x} = (\ma A + \ma A^\top)\vec x$ \qquad
+	$\frac{\partial \vec x^\top \ma A \vec y}{\partial \ma A} = \vec x \vec y^\top$\\
+	%$\frac{\partial \vec x^\top \ma A \vec y}{\partial \ma A} = \vec x \vec y^\top$
+	%$\frac{\partial \det( \ma A )}{\partial \ma A} = \det(\ma A) \left( \ma A^{-1} \right)^\top$\\
+	$\frac{\partial \det( \ma B \ma A \ma C )}{\partial \ma A} = \det(\ma B \ma A \ma C) \left( \ma A^{-1} \right)^\top$
 \end{sectionbox}
 
 
@@ -615,6 +616,34 @@ regulär, falls $\forall t \in [a,b]:\dot \gamma(t) \ne \vec 0$ (Keine Knicke), 
 \end{sectionbox}	
 
 
+\begin{sectionbox}
+\begin{cookbox}{LR-Zerlegung mit Gaußverfahren $\ma A = \ma L \ma R$; $\ma P^{-1} = \ma P^\top$}
+	\item Sortiere Zeilen von $\ma A$ mit $\ma P$ so dass $a_{11} > ... > a_{n1}$
+	\item Zerlegen von $\ma P \ma A \vec x = \vec b$ zu $\ma L (\ma R \vec x) = \ma L \vec y = \ma P^\top \vec b$ mit\\
+		$\underset{\text{(Beispiel für } 2 \times 2)}{\text{Zerlegungsmatrix:}}$ $\ma A = \mat{a & b \\ c & d} \ra \mat{a & b \\ \frac{c}{a} & d - \frac{c}{a} b} = \ma A^*$ \\
+		mit den Eliminationsfaktoren $l_{ik} = \frac{a_{ik}}{a_{kk}} \overset{z.B.}{=} \frac{c}{a}$
+	\item Für jede Spalte der unteren Dreiecksmatrix wiederholen.\\
+		 Für eine $n \times n$ Matrix braucht man $n-1$ Durchläufe
+	\item $\ma R = \text{triu}(\ma A^*)$ \quad (obere $\triangle$-Matr. von $\ma A^*$, inkl. Diagonalelem.)
+	\item $\ma L = \text{tril}(\ma A^*,-1)+\ma 1$ \quad (untere $\triangle$-Matr. mit $1$en auf Diag.)
+	\item \textbf{Vorwärtseinsetzen:} $\ma L \vec y = \vec b$ bzw. $\ma L \vec y = \ma P^\top \vec b$ \quad (Löse nach $\vec y$)
+	\item \textbf{Rückwärtseinsetzen:} $\ma R \vec x = \vec y$ \quad (Löse nach $\vec x$)
+\end{cookbox}
+\end{sectionbox}
+
+
+\begin{sectionbox}
+	\begin{cookbox}{QR-Zerlegung mit Householder-Transformation für $\ma A \in \mathbb R^{m\times n }$}
+		\item Setze $\vec a = \vec s_1$ (erste Spalte) und $\vec v = \vec a + \sgn ( a_1) \norm{\vec a} \vec e_1$
+		\item Berechne \emph{Householder}-Trafomatrix $\ma H_{\vec v_1} = \ma 1_m - \frac{2}{\vec v^\top \vec v} \vec v \vec v^\top$
+		\item Erhalte $\ma A^* = \ma H_{\vec v_1} \ma A$ (ersten Spalte bis auf $a_{11}$ nur Nullen)
+		\item Wiederhole für $\ma A^*$ ohne 1. Zeile und Spalte (Untermatr. $\ma A^*_{11}$)\\
+			Erweitere $\ma H^*_{\vec v_2}$ oben mit $\ma 1_m$ zu $\ma H_{\vec v_2}$ ($h_{11} = 1$)
+		\item Nach $p = \min \eset{m - 1, n}$ Schritten: $\ma H_{\vec v_p} \ma A^* = \ma R$ weil
+		\item $\ma Q^\top = \ma H_{\vec v_p} \cdots \ma H_{\vec v_1}$ und  $\ma Q^\top \ma A = \ma R$
+	\end{cookbox}
+\end{sectionbox}
+
 
 \begin{sectionbox}
 	\subsection{Orthogonalisierungsverfahren nach Gram-Schmidt}
@@ -625,6 +654,7 @@ regulär, falls $\forall t \in [a,b]:\dot \gamma(t) \ne \vec 0$ (Keine Knicke), 
 	Erhalte Ortho\textbf{normal}system durch $\vec b_i' = \vec b_i/\norm{\vec b_i}$\\
 	QR-Zerlegung: $\ma A = \ma Q \ma R$ mit $\ma Q = \big[\vec b_1', ... , \vec b_n'\big]$ \quad $\ma R = \ma Q^\top \ma A$
 \end{sectionbox}
+
 
 
 \begin{sectionbox}
