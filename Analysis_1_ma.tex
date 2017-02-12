@@ -1,10 +1,10 @@
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % LaTeX4EI Template for Cheat Sheets                                Version 1.0
-%					
+%
 % Authors: Emanuel Regnath, Martin Zellner
 % Contact: info@latex4ei.de
-% Encode: UTF-8, tabwidth = 4, newline = LF	
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% Encode: UTF-8, tabwidth = 4, newline = LF
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 
 
 % ======================================================================
@@ -42,15 +42,15 @@
 	\begin{itemize}
 		\item \textbf{Dreiecksungleichung:}\begin{math}\begin{array}{l}
 	\abs{x + y} \le \abs{x} + \abs{y} \\
-	\abs{\abs{x}- \abs{y}} \le \abs{x-y} 
+	\abs{\abs{x}- \abs{y}} \le \abs{x-y}
 \end{array}\end{math}
 
    		\item \textbf{Bernoulli-Ungleichung:} \begin{math}\begin{array}{l}
 	(1+a)^n \ge 1 + na
-\end{array}\end{math} 
+\end{array}\end{math}
 
 		\item \textbf{Bernoulli für e  $x \in \R$:}\qquad $\text{  }e^x  \ge 1+x $
-		\item \textbf{Nützliche Ungleichung: }$\frac{x+y}{2}\ge\sqrt{xy}\text{ mit gleicheit für }x=y$  
+		\item \textbf{Nützliche Ungleichung: }$\frac{x+y}{2}\ge\sqrt{xy}\text{ mit gleicheit für }x=y$
 		\item \textbf{Für $x>y$ und $n>2$ : }$0<\sqrt[n]{x}-\sqrt[n]{y}<\sqrt[n]{x-y}$
 
 	\end{itemize}
@@ -67,7 +67,7 @@
 		\item \textbf{Binomialkoeffizient:} \begin{math}\begin{array}{l}
 	\binom{n}{k} = \frac{n!}{k!(n-k)!}  \\
 	\binom{n}{0} = \binom{n}{n} = 1
-\end{array}\end{math}\\ 
+\end{array}\end{math}\\
 \item \textbf{Binomialsatz:}\begin{math}\begin{array}{l}
 	(a+b)^n = \sum\limits_{k = 0}^{n} \binom{n}{k} a^{n-k} b^{k}
 \end{array}\end{math}
@@ -87,19 +87,19 @@
 	\subsection{Konvergenz}
 	Eine Folge $(a_n)$ konvergiert gegen den Grenzwert a
 
-		
-	
+
+
 	$\forall\mathcal{E}>0 \text{ }\exists N \in \R \text{ }\forall n \in \N:\text{ } n>N \Rightarrow |a_n - a|<\mathcal{E}$
 
-	
-	
-	
-	
+
+
+
+
 \end{sectionbox}
 
 \begin{sectionbox}
 	\subsection{Monotoniesatz}
-	
+
 	Jede beschränkte und monotone Folge ist konvergent
 
 \end{sectionbox}
@@ -108,15 +108,15 @@
 
 \begin{sectionbox}
 	\subsection{Einschließungskriterium}
-	
+
 Seien $(a_n), (b_n)$  reelle Folgen mit $a = \lim\limits_{n \to \infty}  a_n =  \lim\limits_{n \to \infty}b_n $ , und eine dritte reelle Folge $(c_n)$ erfülle  $(a_n) \le (c_n) \le (b_n)$ für fast alle $n$. Dann konvergiert auch \(c_n\)  gegen $a$.
-	
-	
+
+
 \end{sectionbox}
 
 \begin{sectionbox}
 	\subsection{Bestimmte Divergenz}
-	
+
 	\(a_n\) ist bestimmt divergent gegen $+\infty$ falls gilt: \\
 	$\forall M >0 \text{ }\exists N \in \R \text{ }\forall n \in \N: n>N \Rightarrow a_n>M$ \\
 Für $a_n \in \C $ muss $|a_n| \rightarrow +\infty $ gelten
@@ -148,13 +148,13 @@ Für $a_n \in \C $ muss $|a_n| \rightarrow +\infty $ gelten
 \begin{sectionbox}
 	\subsection{Geometrische Reihe}
 	Die Reihe $\sum \limits_{k=0}^{\infty}\ q^k$ konvergiert für $|q|<1$ und divergiert andernfalls. Es gilt:\\
-	$\sum \limits_{k=0}^{\infty}\ q^k = \frac{1}{1-q}$ 
+	$\sum \limits_{k=0}^{\infty}\ q^k = \frac{1}{1-q}$
 
 \end{sectionbox}
 
 \begin{sectionbox}
 	\subsection{Quotientenkriterium}
-	Sei $\sum \limits_{k=0}^{\infty}\ a_k$ und existiere 
+	Sei $\sum \limits_{k=0}^{\infty}\ a_k$ und existiere
 	$q := \lim\limits_{k \to \infty} |\frac{a_{k+1}}{a_k}| $ dann gilt: \\
 	- für $q<1$ ist die Reihe absolut konvergent\\
 	- für $q>1$ ist die Reihe divergent
@@ -163,8 +163,8 @@ Für $a_n \in \C $ muss $|a_n| \rightarrow +\infty $ gelten
 
 \begin{sectionbox}
 	\subsection{Wurzelkriterium}
-	
-		Sei $\sum \limits_{k=0}^{\infty}\ a_k$ und existiere 
+
+		Sei $\sum \limits_{k=0}^{\infty}\ a_k$ und existiere
 	$q := \limsup \limits_{k \to \infty} \sqrt[k]{|a_k|}\ $ dann gilt: \\
 	- für $q<1$ ist die Reihe absolut konvergent\\
 	- für $q>1$ ist die Reihe divergent
@@ -173,11 +173,11 @@ Für $a_n \in \C $ muss $|a_n| \rightarrow +\infty $ gelten
 
 \begin{sectionbox}
 	\subsection{Leibnizkriterium}
-	Sei $(a_n)$ eine monoton fallende Nullfolge.\\Die  Reihe $s = \sum \limits_{k=1}^{\infty}\ (-1)^{k-1} a_k$ konvergiert.\\	
+	Sei $(a_n)$ eine monoton fallende Nullfolge.\\Die  Reihe $s = \sum \limits_{k=1}^{\infty}\ (-1)^{k-1} a_k$ konvergiert.\\
 	Es gilt: $|s - \sum \limits_{k=1}^{n}\ (-1)^{k-1} a_k| \le a_{n+1}$
-		
 
-	
+
+
 
 \end{sectionbox}
 
@@ -185,17 +185,17 @@ Für $a_n \in \C $ muss $|a_n| \rightarrow +\infty $ gelten
 \begin{sectionbox}
 	\subsection{Majoranten/Minorantenkriterium}
 	Sei $\sum a_k$  und $\sum b_k$ zwei Reihen.\\
-	%$|a_k| \le b_k$ 
+	%$|a_k| \le b_k$
 	\\1. Gilt $0 \le |a_k| \le b_k$ für fast alle k, und ist die Majorante $\sum  b_k$ konvergent, so konvergiert $\sum  a_k$ absolut. \\
-    \\2. Gilt $0 \le a_k \le b_k$ für fast alle k, und ist die Minorante $\sum  a_k$ divergent, so divergiert $\sum  b_k$ 
-	
+    \\2. Gilt $0 \le a_k \le b_k$ für fast alle k, und ist die Minorante $\sum  a_k$ divergent, so divergiert $\sum  b_k$
+
 	%\\ Wenn $\sum \limits_{k=1}^{\infty}\ b_k$ konvergiert, konvergiert  $\sum \limits_{k=0}^{\infty}\ a_k$ absolut.\\
 	%$|\sum \limits_{k=0}^{\infty}\ a_k| \le \sum \limits_{k=0}^{\infty}\ b_k$
 
 \end{sectionbox}
 \begin{sectionbox}
 	\subsection{Integralvergleichskriterium}
-	
+
 	Sei $f:[1, \infty) \rightarrow [0,\infty)$ monoton fallend, dann konvergiert die Reihe $\sum \limits_{k=1}^{\infty} f(k)$ genau dann, wenn das uneigentliche Integral $\int_{1}^{\infty}f(x)dx$ konvergiert.
 \end{sectionbox}
 
@@ -212,8 +212,8 @@ Für $a_n \in \C $ muss $|a_n| \rightarrow +\infty $ gelten
 	\subsection{Konvergenradius}
 	Man betrachte die Koeffizienten Folge $(a_k)$.\\
 	\begin{itemize}
-	\item $\rho := \frac{1}{\limsup\limits_{k \to \infty}\sqrt[k]{|a_k|}}$ mit ,,$\frac{1}{0}=+\infty$" \text{ und } ,,$\frac{1}{\infty}=0$" 
-	\item  $\rho := \frac{1}{\lim\limits_{k \to \infty}|\frac{a_{k+1}}{a_k}|} $ mit ,,$\frac{1}{0}=\infty$" 	
+	\item $\rho := \frac{1}{\limsup\limits_{k \to \infty}\sqrt[k]{|a_k|}}$ mit ,,$\frac{1}{0}=+\infty$" \text{ und } ,,$\frac{1}{\infty}=0$"
+	\item  $\rho := \frac{1}{\lim\limits_{k \to \infty}|\frac{a_{k+1}}{a_k}|} $ mit ,,$\frac{1}{0}=\infty$"
 	\end{itemize}
 
 \end{sectionbox}
@@ -232,17 +232,17 @@ Für $a_n \in \C $ muss $|a_n| \rightarrow +\infty $ gelten
 	$exp(z)=e^z=\sum\limits_{k=0}^{\infty}\frac{z^k}{k!} \text{ für alle } z \in \C$\\
 	$e^{z+w}=e^ze^w$\\
 	Umkehrfunktion: $ln(xy)=ln(x)+ln(y)$
-	
+
 \end{sectionbox}
 
 
 \begin{sectionbox}
 	\subsection{Sinus und Cosinus}
 	\begin{itemize}
-		 
+
 	\item $sin(z):=\frac{e^{iz}-e^{-iz}}{2i}=\sum\limits_{k=0}^{\infty}(-1)^k \frac{z^{2k+1}}{(2k+1)!}$
 \item	$cos(z):=\frac{e^{iz}+e^{-iz}}{2}=\sum\limits_{k=0}^{\infty}(-1)^k \frac{z^{2k}}{(2k)!}$
-		
+
 	\item \textbf{Eulersche Formel: }$e^{iz}=cos(z)+i \text{ }sin(z)$
 	\item \textbf{trigonometrischer Pythagoras: }$sin^2(z)+cos^2(z)=1$
 	\item \textbf{Paritäten: } $sin(-z)=-sin(z) \text{ und } cos(-z)=cos(z)$
@@ -250,13 +250,13 @@ Für $a_n \in \C $ muss $|a_n| \rightarrow +\infty $ gelten
 		sin(z+w) &= sin(z)cos(w)+cos(z)sin(w)\\
 		cos(z+w) &= cos(z)cos(w)-sin(z)sin(w)
 		\end{align*}
-\item \textbf{Ableitungen: } $sin'(x)=cos(x), cos'(x)=-sin(x)$	
+\item \textbf{Ableitungen: } $sin'(x)=cos(x), cos'(x)=-sin(x)$
 
-	
+
 	\end{itemize}
 
-		
-		
+
+
 
 
 \end{sectionbox}
@@ -289,7 +289,7 @@ Für $a_n \in \C $ muss $|a_n| \rightarrow +\infty $ gelten
 	$f:\X \rightarrow \Y \text{ heißt stetig am Punkt } a\in \X \text{ und stetig wenn }f \text{  } \forall a \in \X \text{ stetig ist.}$\\ \\
 	$\forall \mathcal{E}>0 \text{  } \exists \delta >0 \text{  } \forall x \in \X : |x-a|<\delta \Rightarrow |f(x)-f(a)|< \mathcal{E}$
 
-	
+
 \end{sectionbox}
 
 \begin{sectionbox}
@@ -331,7 +331,7 @@ Für $a_n \in \C $ muss $|a_n| \rightarrow +\infty $ gelten
 \begin{sectionbox}
 	\subsection{Punktweise Konvergenz von Funktionenfolgen}
 	Die Funktionenfolge $f_n : \X \rightarrow \Y$ heißt punktweise konvergent gegen eine Funktion $f : \X \rightarrow \Y$ wenn für alle $x \in X$ gilt: $\lim \limits_{n \to \infty} f_n(x)=f(x)$
-	
+
 	\end{sectionbox}
 
 
@@ -398,7 +398,7 @@ gleichmäßig  gegen eine Funktion $f : \X \rightarrow \Y$ , falls \\
 	\begin{itemize}
 		\item $f$ ist monoton steigend genau dann, wenn $f'(x)\ge0$ (für streng >)
 		\item $f$ ist monoton fallend genau dann, wenn $f'(x) \le 0$ (für streng <)
-		\item $f$ ist konstant genau dann, wenn $f'(x) = 0$ 
+		\item $f$ ist konstant genau dann, wenn $f'(x) = 0$
 	\end{itemize}
 
 \end{sectionbox}
@@ -406,7 +406,7 @@ gleichmäßig  gegen eine Funktion $f : \X \rightarrow \Y$ , falls \\
 \begin{sectionbox}
 	\subsection{Regel von l'Hôpital}
 	Seien $a, b \in \R \cup \{-\infty , \infty \}$. Und $f, g : (a, b) \rightarrow \R$ zwei differenzierbare Funktionen. Sei $g′(x) \neq 0$ für alle $x \in [a,b]$, und es existiere der Limes:\\
-	$\lim \limits_{x \to a} \frac{f'(x)}{g'(x)}=: c \in \R $ 
+	$\lim \limits_{x \to a} \frac{f'(x)}{g'(x)}=: c \in \R $
 	\begin{enumerate}
 		\item Falls $\lim\limits_{x \to a} f (x) = \lim \limits_{x \to a} g(x) = 0$ gilt: $\lim\limits_{x \to a} \frac{f(x)}{g(x)}= c$
 		\item Falls $\lim\limits_{x \to a} f (x) = \lim \limits_{x \to a} g(x) = \pm \infty$ gilt: $\lim\limits_{x \to a} \frac{f(x)}{g(x)}= c$
@@ -416,13 +416,13 @@ gleichmäßig  gegen eine Funktion $f : \X \rightarrow \Y$ , falls \\
 
 %\begin{sectionbox}
 %	\subsection{Bekannte Ableitungen}
-	
+
 %\end{sectionbox}
 
 
 \begin{sectionbox}
 	\subsection{Satz 8.28}
-	Es sei $(f_n)_{n \in \N}$ eine Folge differenzierbarer Funktionen $f_n : [a, b] \rightarrow \C$. Wir nehmen an, dass 
+	Es sei $(f_n)_{n \in \N}$ eine Folge differenzierbarer Funktionen $f_n : [a, b] \rightarrow \C$. Wir nehmen an, dass
 	\begin{itemize}
 		\item die Funktionenfolge $(f'_n)_{n \in \N}$ der Ableitungen $f'_n : [a, b] \rightarrow \C$ gleichmäßig gegen ein $ g : [a, b] \rightarrow \C$ konvergiert
 		\item die Zahlenfolge $(f_n(\overline{x}))_{n \in \N}$ für mindestens ein $\overline{x} \in  [a, b]$ konvergiert
@@ -430,7 +430,7 @@ gleichmäßig  gegen eine Funktion $f : \X \rightarrow \Y$ , falls \\
 	Dann konvergiert die Funktionenfolge $(f_n)_{n \in \N}$ gleichmäßig gegen eine differenzierbare Funktion $f : [a,b] \rightarrow \C$, und es gilt $f' = g$. Ist zusätzlich jede Funktion $f_n$ stetig differenzierbar, so ist auch $f$ stetig differenzierbar.
 
 \end{sectionbox}
- 
+
 \begin{sectionbox}
 	\subsection{Taylor-Polynom}
 	Taylor-Polynom für $f \in C^n(I)$, Grad $m \in \N$ und $m \le n$, an der Entwicklungsstelle $y \in I$:\\
@@ -451,7 +451,7 @@ gleichmäßig  gegen eine Funktion $f : \X \rightarrow \Y$ , falls \\
 \begin{sectionbox}
 	\subsection{Jede stetige Funktion ist eine Regelfunktion }
 	Eine Folge von Treppenfunktionen $(\phi_n)_{n \in \N}$, die gleichmäßig gegen $f$ konvergiert, ist gegeben durch
-	$\phi_n(x) = f(x_k^{(n)})$  für alle $x \in (x_{k-1}^{(n)} ,x_k^{(n)}]$, sowie $\phi_n(a) = f(a)$, wobei $(x_k^{(n)})_{k=0}^{n}$  mit $x_k^{(n)}=a+(b-a) \frac{k}{n}$ eine Zerlegung von $[a,b]$ ist. 
+	$\phi_n(x) = f(x_k^{(n)})$  für alle $x \in (x_{k-1}^{(n)} ,x_k^{(n)}]$, sowie $\phi_n(a) = f(a)$, wobei $(x_k^{(n)})_{k=0}^{n}$  mit $x_k^{(n)}=a+(b-a) \frac{k}{n}$ eine Zerlegung von $[a,b]$ ist.
 \end{sectionbox}
 
 \begin{sectionbox}
@@ -466,14 +466,14 @@ gleichmäßig  gegen eine Funktion $f : \X \rightarrow \Y$ , falls \\
 \end{sectionbox}
 \begin{sectionbox}
 	\subsection{Hauptsatz der Differential und Integralrechnung}
-	
-	Es sei $f : [a,b] \rightarrow \C$ eine stetige Funktion. Zu gegebenem $a \in [\alpha, \beta]$ definieren wir die Funktion $F : [a, b] \rightarrow \C$ durch: 
+
+	Es sei $f : [a,b] \rightarrow \C$ eine stetige Funktion. Zu gegebenem $a \in [\alpha, \beta]$ definieren wir die Funktion $F : [a, b] \rightarrow \C$ durch:
 	\begin{itemize}
 		\item $F(x)= \int \limits_a^x f(t)dt $
 		\item $\int \limits_a^b f(t)dt = F(b)-F(a)$
 	\end{itemize}
 	Es gilt $F'(x)=f(x)$
-	
+
 
 \end{sectionbox}
 
@@ -488,8 +488,8 @@ $	\int \limits_a^b f'(x)g(x)dx = \left.f(x)g(x) \right|_a^b - \int \limits_a^b f
 	\subsection{Substitutionsregel}
 	Es sei $f : [a,b] \rightarrow \C$ eine stetige Funktion mit Stammfunktion $F : [a,b] \rightarrow \C$. Weiter sei $g : [\alpha,\beta] \rightarrow [a,b]$ eine stetig differenzierbare Funktion.\\
 	$\int \limits_\alpha^\beta f(g(t))g'(t)dt = \int \limits_{g(\alpha)}^{g(\beta)} f(x)dx = \left.F(x) \right|_{g(\alpha)}^{g(\beta)} $
-	
-	
+
+
 
 \end{sectionbox}
 
@@ -497,7 +497,7 @@ $	\int \limits_a^b f'(x)g(x)dx = \left.f(x)g(x) \right|_a^b - \int \limits_a^b f
 	\subsection{Uneigentliches Integral}
 	Ist $f : [a,b) \rightarrow \C$ mit $b \in  \R \cup \{+ \infty\}$(für $-\infty$ analog) eine uneigentliche Regelfunktion,  dann ist folgender Limes das uneigentliche Integral wenn er existiert :\\
 	$\int \limits_a^b f(x)dx := \lim \limits_{c \to b} \int \limits_a^c f(x)dx$
-	
+
 
 \end{sectionbox}
 
@@ -516,7 +516,7 @@ $	\int \limits_a^b f'(x)g(x)dx = \left.f(x)g(x) \right|_a^b - \int \limits_a^b f
 	\subsection{Restgliedformel für Integrale}
 	Es seien $f \in C^{m+1}([a,b];\R)$ und $y \in [a,b]$ gegeben. Wir definieren das Taylorpolynom $T_m^f (y; x) : [a, b] \rightarrow \R$ wie in Definition 8.33. Dann gilt für jedes $x \in [a, b]$:\\
 	$f(x)=T_m^f(y;x)+ \int \limits_{y}^x \frac{(x-t)^m}{(m)!}f^{(m+1)}(t)dt$
-	
+
 
 \end{sectionbox}
 
@@ -533,7 +533,7 @@ $	\int \limits_a^b f'(x)g(x)dx = \left.f(x)g(x) \right|_a^b - \int \limits_a^b f
 	\end{sectionbox}
 
 
-			
+
 
 
 
@@ -573,7 +573,7 @@ $	\int \limits_a^b f'(x)g(x)dx = \left.f(x)g(x) \right|_a^b - \int \limits_a^b f
 
 \begin{sectionbox}
 	\subsection{Jensensche Integral Ungleichung}
-	
+
 	Es seien $f : [a, b] \rightarrow I , \Lambda : [a, b] \rightarrow R_{>0}$ stetige Funktionen mit  $ \int \limits_{a}^{b} \Lambda(x) dx = 1$, und $g : I \rightarrow \R$ sei konvex.\\
 	$g(\int \limits_{a}^{b}f(x)\Lambda (x)dx) \le \int \limits_{a}^{b}g(f(x))\Lambda (x)dx$\\
 	Ist $g$ strikt konvex, so gilt Gleichheit genau dann, wenn $f$ eine konstante Funktion ist.

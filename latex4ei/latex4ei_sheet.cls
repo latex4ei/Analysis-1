@@ -1,11 +1,11 @@
 %
-% Layout, Macros for LaTeX4EI		
+% Layout, Macros for LaTeX4EI
 %
 % Authors: Emanuel Regnath, Martin Zellner
 % Contact: info@latex4ei.de
 % Version: 1.0
 % License: CC-BY-NC-SA
-% 
+%
 % © 2011-2015, LaTeX4EI
 
 \NeedsTeXFormat{LaTeX2e}
@@ -42,10 +42,10 @@
 	% define baseclass
 	\def\baseclass{scrartcl}
 
-	% set default options for base class 
+	% set default options for base class
 	\PassOptionsToClass{6pt, a4paper, landscape}{\baseclass}
 
-% forward unknown options to class 
+% forward unknown options to class
 % ----------------------------------------------------------------------
 	\DeclareOption*{%
 		\PassOptionsToClass{\CurrentOption}{\baseclass}%
@@ -115,7 +115,7 @@
 	\providecommand{\fstitle}[1]{
 		\vspace{-20mm}{
 		\parbox{2.3cm}{
-			\includegraphics[height=1.4cm]{Logo.pdf}		
+			\includegraphics[height=1.4cm]{Logo.pdf}
 		}
 		\parbox{4cm}{
 			\huge\textbf{#1}
@@ -206,7 +206,7 @@
 	\colorlet{col_topicbox}{black}
 	\colorlet{col_symbolbox}{black}
 	\colorlet{col_cookbox}{black}
-	
+
 	\colorlet{col_table}{black}
 \fi
 

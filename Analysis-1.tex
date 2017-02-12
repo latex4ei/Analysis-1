@@ -2,25 +2,25 @@
 % 2 Seiten
 
 % Dokumenteinstellungen
-% ======================================================================	
+% ======================================================================
 
 % Dokumentklasse (Schriftgröße 6, DIN A4, Artikel)
 \documentclass[6pt,a4paper]{scrartcl}
 
 % Pakete laden
-\usepackage[utf8]{inputenc}		% Zeichenkodierung: UTF-8 (für Umlaute)   
+\usepackage[utf8]{inputenc}		% Zeichenkodierung: UTF-8 (für Umlaute)
 \usepackage[german]{babel}		% Deutsche Sprache
 \usepackage{multicol}			% Spaltenpaket
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{esint}				% erweiterte Integralsymbole
-\usepackage{multicol}			% ermöglicht Seitenspalten  
+\usepackage{multicol}			% ermöglicht Seitenspalten
 \usepackage{wasysym}			% Blitz
 \usepackage{graphicx}
-      
+
 % Seitenlayout und Ränder:
 \usepackage{geometry}
-\geometry{a4paper,landscape, left=6mm,right=6mm, top=0mm, bottom=3mm,includeheadfoot} 
+\geometry{a4paper,landscape, left=6mm,right=6mm, top=0mm, bottom=3mm,includeheadfoot}
 
 %Kopf- und Fußzeile
 \usepackage{fancyhdr}
@@ -33,9 +33,9 @@
 
    \fancyfoot[R]{Stand: \today \qquad \thepage}
    \fancyfoot[L]{Homepage: www.latex4ei.de - Fehler bitte sofort melden.}
-	
+
 % Schriftart SANS für bessere Lesbarkeit bei kleiner Schrift
-\renewcommand{\familydefault}{\sfdefault} 
+\renewcommand{\familydefault}{\sfdefault}
 
 
 % Custom Commands
@@ -58,7 +58,7 @@
   \dimen@\ht0
   \advance\dimen@ by \dp0
   \left\langle #1\rule[-\dp0]{0pt}{\dimen@},#2\right\rangle}}
-  
+
 %Custom functions
 \DeclareMathOperator{\arccot}{arccot}
 
@@ -82,9 +82,9 @@
 Dreiecksungleichung \qquad \qquad \qquad
 \begin{math}\begin{array}{l}
 	\abs{x + y} \le \abs{x} + \abs{y} \\
-	\abs{\abs{x}- \abs{y}} \le \abs{x-y} 
+	\abs{\abs{x}- \abs{y}} \le \abs{x-y}
 \end{array}\end{math} \\
-Cauchy-Schwarz-Ungleichung: \qquad 
+Cauchy-Schwarz-Ungleichung: \qquad
 \begin{math}\begin{array}{l}
 \left| \sprod{x}{y} \right| \le \| x\| \cdot \| y\|
 \end{array}\end{math} \\
@@ -94,7 +94,7 @@ Arithmetische Summenformel \qquad
 	\sum\limits_{k = 1}^{n}k = \frac{n (n+1)}{2}
 \end{array}\end{math}  \\
 \\
-Geometrische Summenformel \qquad 
+Geometrische Summenformel \qquad
 \begin{math}\begin{array}{l}
 	\sum\limits_{k = 0}^{n}q^k = \frac{1 - q^{n+1}}{1-q}
 \end{array}\end{math}\\
@@ -102,29 +102,29 @@ Geometrische Summenformel \qquad
 Bernoulli-Ungleichung \qquad \qquad \quad
 \begin{math}\begin{array}{l}
 	(1+a)^n \ge 1 + na
-\end{array}\end{math}\\   
+\end{array}\end{math}\\
 \\
 Binomialkoeffizient \qquad \qquad \qquad
 \begin{math}\begin{array}{l}
 	\binom{n}{k} = \frac{n!}{k!(n-k)!}  \\
 	\binom{n}{0} = \binom{n}{n} = 1
-\end{array}\end{math}\\ 
-\\                   
-Binomische Formel \qquad \qquad \qquad 
+\end{array}\end{math}\\
+\\
+Binomische Formel \qquad \qquad \qquad
 \begin{math}\begin{array}{l}
 	(a+b)^n = \sum\limits_{k = 0}^{n} \binom{n}{k} a^{n-k} b^{k}
-\end{array}\end{math}   \\ 
+\end{array}\end{math}   \\
 \\
 Äquivalenz von Masse und Energie
 \begin{math}\begin{array}{l}
-	E = mc^2 
-\end{array}\end{math}\\ 
-\\ 
+	E = mc^2
+\end{array}\end{math}\\
+\\
 Wichtige Zahlen: $\sqrt{2} = 1,41421$\quad $\pi=$ ist genau 3 \quad $e = 2,71828$ \quad $\pi =  3,14159$
 
 \paragraph{Fakultäten} % (fold)
 \label{par:fakultaeten}
-$n! = 1 \cdot 2 \cdot 3 \cdot \ldots \cdot n$ \qquad  $0! = 1! = 1$ 
+$n! = 1 \cdot 2 \cdot 3 \cdot \ldots \cdot n$ \qquad  $0! = 1! = 1$
 
 % paragraph fakultäten (end)
 % subsubsection subsection_name (end)
@@ -154,7 +154,7 @@ Jede rationale Zahl $\frac m n \in \mathbb Q$ hat ein Dezimaldarstellung.\\
 $0,25\overline{54} =: a \rightarrow 10000a - 100a = 2554 -25 \Rightarrow a(9900) = 2529 \qquad \Rightarrow a = \frac{2529}{9900} = \frac{281}{1100}$
 
 \subsection{Vollständige Induktion}
-Behauptung: $f(n)=g(n)$ für $n_0 \le n \in \mathbb N$\\ 
+Behauptung: $f(n)=g(n)$ für $n_0 \le n \in \mathbb N$\\
 IA: $n=n_0$: \quad Zeige $f(n_0)=g(n_0)$.\\
 IV: Annahme $f(n)=g(n)$ gilt für ein beliebiges $n\in\mathbb N$\\
 IS: $n \rightarrow n+1$: \quad Zeige $f(n+1)=\underset{=wahr}{f(n)}  \dotsc=g(n+1)$
@@ -288,7 +288,7 @@ $\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c}
 x & 0& 30 & 45& 60 & 90 & 120 & 135& 150& 180 & 270 & 360 \\ \hline
 x & 0 & \pi / 6 & \pi / 4 & \pi / 3 & \pi / 2 & \frac{2}{3}\pi& \frac{3}{4}\pi& \frac{5}{6}\pi& \pi  & \frac{3}{2}\pi & 2 \pi \\ \hline
 \sin & 0 & \frac{1}{2} & \frac{1}{\sqrt{2}} & \frac{\sqrt 3}{2} & 1 & \frac{\sqrt 3}{2} & \frac{1}{\sqrt{2}} & \frac{1}{2} & 0 & -1 & 0 \\
-\cos & 1 & \frac{\sqrt 3}{2} & \frac{1}{\sqrt 2} & \frac{1}{2} & 0 & -\frac{1}{2} & -\frac{1}{\sqrt 2}  & -\frac{\sqrt 3}{2}   & -1 & 0 & 1 \\     
+\cos & 1 & \frac{\sqrt 3}{2} & \frac{1}{\sqrt 2} & \frac{1}{2} & 0 & -\frac{1}{2} & -\frac{1}{\sqrt 2}  & -\frac{\sqrt 3}{2}   & -1 & 0 & 1 \\
 \tan & 0 & \frac{\sqrt{3}}{3}&1 &\sqrt{3} & \lightning & -\sqrt{3}& -1& -\sqrt{3}& 0 & \lightning & 0\\
 \end{array}$
 }
@@ -336,7 +336,7 @@ $\begin{array}{lll}
 
 \subsubsection{Wichtige Regeln}
 $a_n=q^n \quad \overset{n \rightarrow \infty}{\longrightarrow} \quad \begin{cases} 0 & |q|<1 \\ 1 & q=1 \\ \pm \infty & q < -1  \\  + \infty & q > 1\end{cases}$ \\
-$a_n=\frac{1}{n^k}\rightarrow 0$ \qquad $\forall k \ge 1$\\ 
+$a_n=\frac{1}{n^k}\rightarrow 0$ \qquad $\forall k \ge 1$\\
 $a_n=\left(1+\frac{c}{n}\right)^n \rightarrow e^c$ \\
 $a_n=n\left(c^{\frac1{n}}-1\right) = \ln c$\\
 $a_n=\frac{n^2}{2^n}\ra 0$ \qquad \qquad \qquad ($2^n \ge n^2$ \quad $\forall n\ge 4$) \\
@@ -361,7 +361,7 @@ Der Limes inferior einer Folge $x_n \subset \mathbb{R}$ der kleinste Grenzwert k
 
 \subsubsection{Konvergenzkriterien}
 $\sum^{\infty}_{n = 0} a_n$ divergiert, falls $a_n \not \rightarrow 0$ oder\\
-Minorante:$\exists \sum^{\infty}_{n = 0} b_n (divergiert) \quad \land \quad a_n \ge b_n \quad \forall n\ge n_0$\\[0.6em] 
+Minorante:$\exists \sum^{\infty}_{n = 0} b_n (divergiert) \quad \land \quad a_n \ge b_n \quad \forall n\ge n_0$\\[0.6em]
 $\sum^{\infty}_{n = 0}(-1)^n a_n$ konvergiert, if $(a_n)$ monoton fallende Nullfolge (Leibnitz)\\
 oder Majorante: $\exists \sum^{\infty}_{n = 0} b_n = b \quad \land \quad a_n \le b_n \quad \forall n\ge n_0$\\
 \\
@@ -370,7 +370,7 @@ Absolute Konvergenz($\sum^\infty_{n=0} |a_n|=a$ konvergiert), falls:\\
 2. Quotienten und Wurzelkriterium (BETRAG nicht vergessen!)
 \begin{eqnarray*}
 	\rho := \lim_{n \rightarrow \infty} \abs{\frac{a_{n+1}}{a_n}} \qquad \lor \qquad \rho := \lim_{n \rightarrow \infty} \sqrt[n]{\abs{a_n}} \qquad \forall n > N\\
-	\text{Falls} 
+	\text{Falls}
 	\begin{cases}
 		\rho < 1 \Ra  ~\sum^\infty_{n=0} a_n \text{ konvergiert absolut} \\
 		\rho > 1 \Ra  ~\sum^\infty_{n=0} a_n \text{ divergiert} \\
@@ -389,7 +389,7 @@ f(x)=\sum_{n=0}^\infty a_n \cdot (x-c)^n
 \subsubsection{Konvergenzradius}
 $R = \lim\limits_{n\rightarrow \infty} \abs{\frac{a_n}{a_{n+1}}}=\frac{1}{\lim\limits_{n\rightarrow \infty}\sqrt[n]{\abs{a_n}}}$ \\
 $R =\liminf\limits_{n\rightarrow \infty} \abs{\frac{a_n}{a_{n+1}}}=\frac{1}{\limsup\limits_{n\rightarrow \infty}\sqrt[n]{\abs{a_n}}}$ \\ \\
-$f(x)\begin{cases} 
+$f(x)\begin{cases}
 	\text{konvergiert absolut} & \abs{x-c} < R \\
 	\text{divergiert} & \abs{x-c} > R \\
 	\text{keine Aussage möglich} & \abs{x-c} = R
@@ -457,7 +457,7 @@ $\int\lambda f(x)+\mu g(x) \, \mathrm dx=\lambda\int f(x) \, \mathrm dx + \mu\in
 \everymath{\displaystyle}	% Formeln ab hier groß Schreiben
 \begin{math}\renewcommand{\arraystretch}{1.8}
 \begin{array}{c|c|c}
-F(x) & f(x) & f'(x) \\ \hline 
+F(x) & f(x) & f'(x) \\ \hline
 \frac{1}{q+1}x^{q+1} & x^q & qx^{q-1} \\
 \raisebox{-0.2em}{$\frac{2\sqrt{ax^3}}{3}$} & \sqrt{ax} & \raisebox{0.2em}{$\frac{a}{2\sqrt{ax}}$}\\
 x\ln(ax) -x & \ln(ax) & \textstyle \frac{a}{x}\\
@@ -535,7 +535,7 @@ Häufige Integrale nach Partialbruchzerlegung
 %===========================================================================================================================================================
 Man approximiert eine $m$-mal diffbare Funktion $f:I=[a,b] \rightarrow \mathbb R$ \\ in $x_0 \in I$ mit dem $m$-ten Taylorpolynom:\\
 \begin{equation*}
-T_{m}(x_0;x)= \sum_{i=0}^{m} \frac{f^{(i)}(x_0)}{i!}(x-x_0)^i 
+T_{m}(x_0;x)= \sum_{i=0}^{m} \frac{f^{(i)}(x_0)}{i!}(x-x_0)^i
 \end{equation*}
 %$T_{m,f,x_0}(x)=f(x_0)+\frac{f'(x_0)}{1!}(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\dotsc +\frac{f^{(m)}(x_0)}{m!}(x-x_0)^m$\\
 Taylor-Entw. von Polynomen/Potenzreihen sind die Funktionen selbst.\\
@@ -549,7 +549,7 @@ Konvergenzradius: $R = \underset{n\rightarrow \infty}{\lim} \abs{\frac{a_n}{a_{n
 	$= \frac{f^{(m+1)}(\xi)}{(m+1)!}(x-x_0)^{m+1}$ \quad
 	$\xi \in [x, x_0]$ (Lagrange) \\
 	\textbf{Fehlerabschätzung:} Wähle $\xi$ und $x$ so, dass $R_{m+1}(x)$ maximal wird.
-	
+
 \subsection{Landau-Notation}
 \begin{itemize}\itemsep-1pt
 	\item $f(x) = o(g(x))$ für $x \rightarrow a \Leftrightarrow \lim\limits_{x \rightarrow a} \frac{f(x)}{g(x)} = 0$
@@ -579,8 +579,8 @@ Bei \emph{Taylor-Entwicklung}:
 		\item Logarithmusfunktion\\
 		$\ln{(1 + x)} = \sum\limits_{k = 1}^m\frac{(-1)^{k + 1}}{k}x^k + O(x^{m + 1})$
 	\end{itemize}
-	
-	
+
+
 \subsection{Kurven}
 %===========================================================================================================================================================
 Eine Kurve ist ein eindimensionales Objekt.\\
@@ -614,7 +614,7 @@ Krümmung von $\gamma$: $\kappa(t)= \norm{\frac{\mathrm d^2 \gamma}{\mathrm d s^
 \begin{equation*}
 L(\gamma) = \int_a^b \sqrt{\dot x^2 + \dot y^2}\; \mathrm dt \qquad \qquad \tilde{\kappa}(t)=\frac{\dot x \ddot y - \ddot x \dot y}{(\dot x^2 + \dot y^2)^{\frac{3}{2}}}
 \end{equation*}
-Wenn $\gamma$ nach der Bogenlänge umparametrisiert, gilt 
+Wenn $\gamma$ nach der Bogenlänge umparametrisiert, gilt
 \begin{equation*}
 \tilde{\kappa}(t)=\dot x \ddot y - \ddot x \dot y
 \end{equation*}
@@ -639,12 +639,12 @@ Offene Kugelmenge vom Radius $r$: $B_r(x_0)$\\
 	{\ensuremath{\bigl\{ \bigl. x\in \mathbb R^n \, \bigr| \, \norm{x-x_0} < \varepsilon \bigr\}}}$
 	%\iset{x\in \mathbb R^n}{\norm{x-x_0} < \varepsilon} \subseteq D$
 	\item Die Menge $D$ heißt offen, falls $D=\overset{\circ}{D}$
-	\item Randpunkt $x_0 \in \mathbb R^n$ des Rands $\partial D$ von $D$, falls $\forall \varepsilon > 0:$ \\ 
+	\item Randpunkt $x_0 \in \mathbb R^n$ des Rands $\partial D$ von $D$, falls $\forall \varepsilon > 0:$ \\
 		$B_\varepsilon(x_0) \cap D \ne \emptyset \ \land \ B_\varepsilon(x_0) \cap D^C \ne \emptyset \ \Rightarrow \ \partial D = \partial D^C$
 	\item Abschluß $\overline D$ von $D$: $\overline{D}=D \cup \partial D$
 	\item Die Menge $D$ ist abgeschlossen, falls $\partial D \subseteq D$
 	\item beschränkt, falls $\exists \mu \in \mathbb R \forall x \in D: \norm{x} < \mu$
-	\item kompakt, falls D abgeschlossen und beschränkt ist. 
+	\item kompakt, falls D abgeschlossen und beschränkt ist.
 \end{itemize}
 Es gilt: Ist $D \subseteq \mathbb R^n$ offen, so ist $D^C$ abgeschlossen. \\
 $\mathbb R$ und $\emptyset$ sind offen und abgeschlossen.
