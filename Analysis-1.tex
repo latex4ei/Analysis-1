@@ -267,7 +267,7 @@ $f(t)=A\cdot \cos(\omega t + \varphi_0)=A\cdot \sin(\omega t + \frac{\pi}{2}+ \v
 \begin{eqnarray*}
 	\sin (-x) = -\sin (x)  \quad & \quad \cos (-x) = \cos (x) \\
 	\sin^2 x + \cos^2 x = 1  \quad & \quad \tan x = \frac{\sin x}{\cos x} \\
-	e^{ix}=\cos(x)+i\sin(x) \quad & \quad e^{-ix}=\sin(x)-i\cos(x) \\
+	e^{ix}=\cos(x)+i\sin(x) \quad & \quad e^{-ix}=\cos(x)-i\sin(x) \\
 	\sin(x)=\frac{1}{2i}\enbrace{e^{ix}-e^{-ix}} \quad & \quad \cos(x)=\frac{1}{2}\enbrace{e^{ix}+e^{-ix}} \\
 	\sinh(x)=\frac{1}{2}(-e^{-x}+e^x) & \cosh(x)=\frac{1}{2}(e^{-x}+e^x)
 \end{eqnarray*}
@@ -289,7 +289,7 @@ x & 0& 30 & 45& 60 & 90 & 120 & 135& 150& 180 & 270 & 360 \\ \hline
 x & 0 & \pi / 6 & \pi / 4 & \pi / 3 & \pi / 2 & \frac{2}{3}\pi& \frac{3}{4}\pi& \frac{5}{6}\pi& \pi  & \frac{3}{2}\pi & 2 \pi \\ \hline
 \sin & 0 & \frac{1}{2} & \frac{1}{\sqrt{2}} & \frac{\sqrt 3}{2} & 1 & \frac{\sqrt 3}{2} & \frac{1}{\sqrt{2}} & \frac{1}{2} & 0 & -1 & 0 \\
 \cos & 1 & \frac{\sqrt 3}{2} & \frac{1}{\sqrt 2} & \frac{1}{2} & 0 & -\frac{1}{2} & -\frac{1}{\sqrt 2}  & -\frac{\sqrt 3}{2}   & -1 & 0 & 1 \\
-\tan & 0 & \frac{\sqrt{3}}{3}&1 &\sqrt{3} & \lightning & -\sqrt{3}& -1& -\sqrt{3}& 0 & \lightning & 0\\
+\tan & 0 & \frac{\sqrt{3}}{3}&1 &\sqrt{3} & \lightning & -\sqrt{3}& -1& -\frac{1}{\sqrt{3}} & 0 & \lightning & 0\\
 \end{array}$
 }
 
@@ -320,7 +320,7 @@ Eine Folge konvergiert gegen eine Zahl $a$:\ $(a_n) \overset{n \rightarrow \inft
 \item Ist $(a_n)$ Konvergent, so ist $(a_n)$ beschränkt
 \item Ist $(a_n)$ unbeschränkt, so ist $(a_n)$ divergent.
 \item \emph{Das Monotoniekriterium}: Ist $(a_n)$ beschränkt und monoton, so konvergiert $(a_n)$
-\item \emph{Das Cauchy-Kriterium:} Eine Folge $(a_n)$ konvergiert gerade dann, wenn: \\ $\forall \epsilon >0 \, \exists \,  N \in \mathbb N_0: \abs{a_n - n_m} < \epsilon \, \forall n, m \ge N$
+\item \emph{Das Cauchy-Kriterium:} Eine Folge $(a_n)$ konvergiert gerade dann, wenn: \\ $\forall \epsilon >0 \, \exists \,  N \in \mathbb N_0: \abs{a_n - a_m} < \epsilon \, \forall n, m \ge N$
 \end{itemize}
 Regeln für konvergente Folgen $(a_n) \overset{n \rightarrow \infty}{\longrightarrow} a$ und $(b_n) \overset{n \rightarrow \infty}{\longrightarrow} b$:\\
 $\begin{array}{lll}
@@ -470,7 +470,7 @@ e^x & e^x & e^x \\
 x\arcsin (x)+\sqrt{1-x^2} & \arcsin(x) & \frac{1}{\sqrt{1-x^2}}\\
 x\arccos (x)-\sqrt{1-x^2} & \arccos(x) & -\frac{1}{\sqrt{1-x^2}}\\
 x\arctan (x)-\frac{1}{2} \ln \left| 1+ x^2 \right| & \arctan (x) & \frac{1}{1+x^2} \\
-x\arctan (x)+\frac{1}{2} \ln \left| 1+ x^2 \right| & \arccot (x) & -\frac{1}{1+x^2} \\
+x\arccot (x)+\frac{1}{2} \ln \left| 1+ x^2 \right| & \arccot (x) & -\frac{1}{1+x^2} \\
 \sinh(x) & \cosh(x) & \sinh (x) \\
 \cosh(x) & \sinh(x) & \cosh (x)\\
 \end{array}
