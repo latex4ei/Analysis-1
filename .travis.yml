@@ -11,7 +11,7 @@ before_install:
 - wget http://mirrors.ctan.org/macros/latex/contrib/titlesec.zip && unzip titlesec.zip
 - sudo rm -r /usr/share/texlive/texmf-dist/tex/latex/titlesec
 - sudo mv titlesec /usr/share/texlive/texmf-dist/tex/latex/
-- wget https://raw.githubusercontent.com/kmorel/UseLATEX/master/UseLATEX.cmake
+- wget https://gitlab.kitware.com/kmorel/UseLATEX/raw/master/UseLATEX.cmake
 - CMAKE_ROOT=$(cmake --system-information | grep "CMAKE_ROOT " | cut -d' ' -f 2 | cut -d'"' -f2)
 - sudo mv UseLATEX.cmake $CMAKE_ROOT/Modules/
 - wget https://github.com/latex4ei/latex4ei-packages/archive/master.zip && unzip master.zip
@@ -23,7 +23,17 @@ install: true
 script:
 - pdflatex Analysis-1.tex
 - mkdir -p build
-- cd build && cmake ..; make
+- cd build && cmake ..; make; cd ..
+- mkdir -p export && cp build/*.pdf build/git.id export
+- echo "# This branch is for deployment only" >> export/README.md
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  local-dir: export
+  on:
+    branch: master
 
 notifications:
   email: false
