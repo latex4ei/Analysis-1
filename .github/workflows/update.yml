@@ -27,7 +27,6 @@ jobs:
       - name: Commit changes to a new branch
         run: |
           git checkout -b changes/${{ github.run_id }}
-          git pull origin changes/${{ github.run_id }}
           git add .
           git commit -m "Apply automated updates"
           git push -u origin changes/${{ github.run_id }}
