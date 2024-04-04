@@ -22,17 +22,69 @@
 \usepackage{geometry}
 \geometry{a4paper,landscape, left=6mm,right=6mm, top=0mm, bottom=3mm,includeheadfoot}
 
-%Kopf- und Fußzeile
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
+% UPDATE WITHOUT CLASS CHANGE
+% ----------------------------------------------------------------------
 
-   \fancyfoot[C]{\textbf{Analysis 1} von Lukas Kompatscher (lukas.kompatscher@tum.de)}
-   \renewcommand{\headrulewidth}{0.0pt} %obere Linie ausblenden
-   \renewcommand{\footrulewidth}{0.1pt} %untere Linie
+% LastPage
+\usepackage{lastpage}
 
-   \fancyfoot[R]{Stand: \today \qquad \thepage}
-   \fancyfoot[L]{Homepage: www.latex4ei.de - Fehler bitte sofort melden.}
+% Allow hyperlinks
+	\RequirePackage[pagebackref=true,pdfpagelabels]{hyperref}
+	
+% Colors
+	\RequirePackage{latex4ei/latex4ei_colors}
+	\colorlet{col_link}{tum_blue_dark}
+	\hypersetup{
+	colorlinks=true,
+	linkcolor=col_link,
+	urlcolor=col_link,
+	citecolor=col_link,
+}
+
+% set pdfoptions
+	\AtBeginDocument{
+		\hypersetup{
+			pdftitle={Analysis 1},
+	        pdfauthor={Lukas Kompatscher},
+	        pdfcreator={LaTeX4EI template (www.latex4ei.de)},
+	        pdfkeywords={latex4ei}
+	    }
+	}
+
+% Date with git commit number
+	\newcommand{\themydate}{\today} % Default URL placeholder
+	\newcommand{\mydate}[1]{\renewcommand{\themydate}{#1}}	
+
+% Header and Footer
+	\RequirePackage{fancyhdr}
+
+	\pagestyle{fancy}
+	\fancyhf{}
+
+	\AtBeginDocument{
+	\IfFileExists{git.id}{\input{git.id}}{}
+	\ifdefined\GitNiceDate\mydate{\GitNiceDate\ (git \GitRevision)}\fi
+	\ifdefined\GitIssuesURL
+		\ifdefined\setissueslinkurl
+		\setissueslinkurl{\GitIssuesURL} % Set the actual URL
+		\fi
+	\fi
+	}
+	
+% Define Email
+	\providecommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
+	
+%
+	\fancyfoot[C]{von Lukas Kompatscher\ -- Mail: \email{lukas.kompatscher@tum.de}}
+	\fancyfoot[R]{Stand: \themydate \qquad \thepage/\pageref{LastPage}}
+	\fancyfoot[L]{Homepage: \url{www.latex4ei.de} -- Fehler bitte \emph{sofort} \href{\issueslinkurl}{melden}.}
+	
+	\renewcommand{\headrulewidth}{0.0pt} %obere Linie ausblenden
+	\renewcommand{\footrulewidth}{0.1pt} %obere Linie ausblenden
+	
+	\newcommand{\issueslinkurl}{https://github.com/latex4ei/Allgemein/issues} % Default URL placeholder
+	\newcommand{\setissueslinkurl}[1]{\renewcommand{\issueslinkurl}{#1}}
+% ----------------------------------------------------------------------
 
 % Schriftart SANS für bessere Lesbarkeit bei kleiner Schrift
 \renewcommand{\familydefault}{\sfdefault}
@@ -665,7 +717,7 @@ $\mathbb R$ und $\emptyset$ sind offen und abgeschlossen.
 
 \end{multicols*}
 % Ende der Spalten
-
+\label{LastPage}
 
 % Dokumentende
 % ======================================================================

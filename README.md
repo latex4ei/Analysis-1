@@ -1,6 +1,6 @@
 # Analysis 1
 
-[![Build Status](https://travis-ci.org/latex4ei/Analysis-1.svg?branch=master)](https://travis-ci.org/latex4ei/Analysis-1)
+[![Actions Status](https://travis-ci.org/latex4ei/Analysis-1.svg?branch=master)](https://travis-ci.org/latex4ei/Analysis-1)
 [![Join the chat at https://gitter.im/LaTeX4Ei/Lobby](https://badges.gitter.im/LaTeX4Ei/Lobby.svg)](https://gitter.im/LaTeX4Ei/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Formelsammlung für Latex4ei
