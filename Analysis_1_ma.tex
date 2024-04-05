@@ -15,6 +15,9 @@
 % defaults: color, english
 \documentclass[german]{latex4ei/latex4ei_sheet}
 
+%custom packages
+\usepackage[utf8]{inputenc}		% Zeichenkodierung: UTF-8 (für Umlaute)
+
 % set document information
 \title{Analysis I -\\ Für Mathematiker}
 \author{Daniel Gloukhman}					% optional, delete if unchanged
@@ -382,7 +385,8 @@ gleichmäßig  gegen eine Funktion $f : \X \rightarrow \Y$ , falls \\
 
 \begin{sectionbox}
 	\subsection{Ableitung der Umkehrfunktion}
-	Sei $g $ eine stetige, streng monotone Funktion und $f $ die Umkehrfunktion. Wenn $g$ an der Stelle $y_* := f(x_*)$ differenzierbar ist mit $g′(y_*) \neq 0$, dann ist $f$ bei $x_*$ differenzierbar mit $f'(x_*)=\frac{1}{g'(y_*)}=\frac{1}{g'(f(x_*))}$
+	Sei $g$ eine stetige, streng monotone Funktion und $f$ die Umkehrfunktion. Wenn $g$ an der Stelle $y_* := f(x_*)$ differenzierbar ist mit $g'(y_*) \neq 0$, dann ist $f$ bei $x_*$ differenzierbar mit $f'(x_*)=\frac{1}{g'(y_*)}=\frac{1}{g'(f(x_*))}$
+
 
 \end{sectionbox}
 
@@ -405,7 +409,7 @@ gleichmäßig  gegen eine Funktion $f : \X \rightarrow \Y$ , falls \\
 
 \begin{sectionbox}
 	\subsection{Regel von l'Hôpital}
-	Seien $a, b \in \R \cup \{-\infty , \infty \}$. Und $f, g : (a, b) \rightarrow \R$ zwei differenzierbare Funktionen. Sei $g′(x) \neq 0$ für alle $x \in [a,b]$, und es existiere der Limes:\\
+	Seien $a, b \in \R \cup \{-\infty , \infty \}$. Und $f, g : (a, b) \rightarrow \R$ zwei differenzierbare Funktionen. Sei $g'(x) \neq 0$ für alle $x \in [a,b]$, und es existiere der Limes:\\
 	$\lim \limits_{x \to a} \frac{f'(x)}{g'(x)}=: c \in \R $
 	\begin{enumerate}
 		\item Falls $\lim\limits_{x \to a} f (x) = \lim \limits_{x \to a} g(x) = 0$ gilt: $\lim\limits_{x \to a} \frac{f(x)}{g(x)}= c$
