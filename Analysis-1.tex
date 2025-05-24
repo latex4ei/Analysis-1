@@ -10,6 +10,7 @@
 % Pakete laden
 \usepackage[utf8]{inputenc}		% Zeichenkodierung: UTF-8 (für Umlaute)
 \usepackage[german]{babel}		% Deutsche Sprache
+\usepackage{multicol}			% Spaltenpaket
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{esint}				% erweiterte Integralsymbole
@@ -171,7 +172,7 @@ Binomische Formel \qquad \qquad \qquad
 	E = mc^2
 \end{array}\end{math}\\
 \\
-Wichtige Zahlen: $\sqrt{2} = 1,41421$\quad $\pi=$ ist genau 3 \quad $e = 2,71828$ \quad $\pi =  3,14159$
+Wichtige Zahlen: $\sqrt{2} = 1,41421$ \quad $e = 2,71828$ \quad $\pi =  3,14159$ \quad $\sqrt(2)/2 = 1/\sqrt(2) = 0.707$ \quad $\sqrt(3)/2 = 0.866$
 
 \paragraph{Fakultäten} % (fold)
 \label{par:fakultaeten}
@@ -201,7 +202,7 @@ Angabe durch Eigenschaft: $A=\{n\in\mathbb N\ \vert\ 0<n<4\}$
 
 $\mathbb Q=\{\frac{p}{q}\ \vert\ p\in\mathbb Z; q\in\mathbb N\}$\\
 \\
-Jede rationale Zahl $\frac m n \in \mathbb Q$ hat ein Dezimaldarstellung.\\
+Jede rationale Zahl $\frac m n \in \mathbb Q$ hat eine Dezimaldarstellung.\\
 $0,25\overline{54} =: a \rightarrow 10000a - 100a = 2554 -25 \Rightarrow a(9900) = 2529 \qquad \Rightarrow a = \frac{2529}{9900} = \frac{281}{1100}$
 
 \subsection{Vollständige Induktion}
@@ -212,7 +213,7 @@ IS: $n \rightarrow n+1$: \quad Zeige $f(n+1)=\underset{=wahr}{f(n)}  \dotsc=g(n+
 
 \subsection{Komplexe Zahlen}
 % ----------------------------------------------------------------------
-Eine komplexe Zahl $z=a+b\mathbf{i},\ z\in \mathbb C, \quad a,b \in \mathbb R$ besteht aus einem Realteil $\Re(z)=a$ und einem Imaginärteil $\Im(z)=b$, wobei $\mathbf{i}=\sqrt{-1}$ die immaginären Einheit ist.
+Eine komplexe Zahl $z=a+b\mathbf{i},\ z\in \mathbb C, \quad a,b \in \mathbb R$ besteht aus einem Realteil $\Re(z)=a$ und einem Imaginärteil $\Im(z)=b$, wobei $\mathbf{i}=\sqrt{-1}$ die immaginäre Einheit ist.
 Es gilt: \quad $i^2 = -1$ \quad $i^4 = 1$
 \subsubsection{Kartesische Koordinaten}
 Rechenregeln:\\
@@ -220,11 +221,11 @@ $z_1+z_2=(a_1+a_2)+(b_1+b_2)\mathbf{i}$\\
 $z_1\cdot z_2=(a_1\cdot a_2-b_1\cdot b_2)+(a_1\cdot b_2+a_2\cdot b_1)\mathbf{i}$\\
 \\
 Konjugiertes Element von $z=a+b\mathbf{i}$:\\
-$\overline{z}=a-b\mathbf{i}$\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad $e^{\overline{ix}} = e^{-ix}$  \\
+$\overline{z}=a-b\mathbf{i}$\qquad \qquad ${\overline{e^{ix}}} = e^{-ix}$ für $x \in \mathbb R$  \\
 $z\overline{z}=|z|^2=a^2+b^2$\\
 \\
-Inverses Element:\\
-$z^{-1}=\frac{1}{z}\frac{\overline z}{\overline z z}=\frac{\overline z}{a^2+b^2}=\frac{a}{a^2+b^2} - \frac{b}{a^2+b^2}\mathbf{i}$
+Kehrwert:\\
+$z^{-1}=\frac{1}{z}=\frac{\overline z}{\overline z z}=\frac{\overline z}{a^2+b^2}=\frac{a}{a^2+b^2} - \frac{b}{a^2+b^2}\mathbf{i}$
 
 
 \subsubsection{Polarkoordinaten}
@@ -236,7 +237,7 @@ $r=|z|=\sqrt{a^2+b^2}\quad\varphi=\arg(z)=\begin{cases}+\arccos \left( \frac{a}{
 \item[Multiplikation:] $z_1\cdot z_2=r_1 \cdot r_2 ( \cos ( \varphi_1 + \varphi_2) + \mathbf{i} \sin (\varphi_1 + \varphi_2))$
 \item[Division:] $\frac{z_1}{z_2}=\frac{r_1}{r_2} ( \cos ( \varphi_1 - \varphi_2) + \mathbf{i} \sin (\varphi_1 - \varphi_2))$
 \item[n-te Potenz:] $z^n=r^n\cdot e^{n\varphi \mathbf{i}}= r^n (\cos (n \varphi) + \mathbf{i} \sin (n \varphi))$
-\item[n-te Wurzel:] $\sqrt[n]{z}= z_k = \sqrt[n]{r} \left(\cos \left(\frac{\varphi + 2k\pi}{n}\right) + \mathbf{i} \sin \left(\frac{\varphi + 2k\pi}{n}\right)\right) \\ k =0,1, \ldots, n-1$
+\item[n-te Wurzel:] $w_k = \sqrt[n]{z}= \sqrt[n]{r} \left(\cos \left(\frac{\varphi + 2k\pi}{n}\right) + \mathbf{i} \sin \left(\frac{\varphi + 2k\pi}{n}\right)\right) \\ k =0,1, \ldots, n-1$
 \item[Logarithmus:] $\ln(z)=\ln(r) + \mathbf{i}(\varphi + 2k\pi)$ \quad (Nicht eindeutig!)
 \end{description}
 Anmerkung: Addition in kartesische Koordinaten umrechnen(leichter)!
@@ -261,7 +262,7 @@ $g_1 \pm g_2 = g_3$ \qquad $u_1 \pm u_2 = u_3$\\
 $g_1 \cdot g_2=g_3$ \qquad $u_1 \cdot u_2 = g_3$ \qquad $u_1 \cdot g_1=u_3$
 
 \subsubsection{Kurvendiskussion von $f: I = [a, b] \rightarrow \mathbb{R}$}
-\textbf{Kandidaten für Extrama (lokal, global)}
+\textbf{Kandidaten für Extrema (lokal, global)}
 \begin{enumerate}\itemsep0pt
 \item Randpunkte von $I$
 \item Punkte in denen $f$ nicht diffbar ist
@@ -298,11 +299,11 @@ $f''(x_0)=0 \text{ und Vorzeichenwechseln an } x_0 \rightarrow x_0$ Wendepunkt \
 Horizontal: $c=\lim\limits_{x\ra \pm \infty} f(x)$\\
 Vertikal: $\exists \text{ Nullstelle } a \text{ des Nenners }: \lim\limits_{x \rightarrow a^{\pm}} f(x) = \pm \infty$\\
 Polynomasymptote $P(x)$: $f(x):=\frac{A(x)}{Q(x)}=P(x)+ \underset{\ra 0}{\frac{B(x)}{Q(x)}}$ \\
-\subsubsection{Wichtige Sätze für \underline{stetige} Fkt. $f: [a,b] \rightarrow \mathbb R, f \mapsto f(x)$ }
+\subsubsection{Wichtige Sätze für \underline{stetige} Fkt. $f: [a,b] \rightarrow \mathbb R, x \mapsto f(x)$ }
 \textbf{Zwischenwertsatz:} $\forall y \in [f(a),f(b)]\ \exists x\in [a,b]:f(x)=y$\\
-\textbf{Satz von Rolle:} Falls $f(a)=f(b)$, dann $\exists x_0: f' (x_0) = 0$\\
-\textbf{Mittelwertsatz:} Falls $f$ diffbar, dann $\exists x_0:f'(x_0)=\frac{f(b)-f(a)}{b-a}$\\
-\textbf{Regel von L'Hospital}:\\ $\lim\limits_{x \rightarrow a} \frac{f(x)}{g(x)} = \left[ \frac{0}{0} \right] / \left[ \frac{\infty}{\infty} \right] \rightarrow \lim\limits_{x \rightarrow a} \frac{f(x)}{g(x)} = \lim\limits_{x \rightarrow a} \frac{f'(x)}{g'(x)}$
+\textbf{Satz von Rolle:} Falls $f$ auf (a,b) diffbar (keine Sprünge oder Knicke), und $f(a)=f(b)$, dann $\exists x_0 \in (a,b): f' (x_0) = 0$\\
+\textbf{Mittelwertsatz:} Falls $f$ auf (a,b) diffbar, dann $\exists x_0 \in (a,b):f'(x_0)=\frac{f(b)-f(a)}{b-a}$\\
+\textbf{Regel von L'Hospital}:\\ $\lim\limits_{x \rightarrow a} \frac{f(x)}{g(x)} = \left[ \frac{0}{0} \right] oder \left[ \frac{\infty}{\infty} \right] \Rightarrow \lim\limits_{x \rightarrow a} \frac{f(x)}{g(x)} = \lim\limits_{x \rightarrow a} \frac{f'(x)}{g'(x)}$
 
 % ----------------------------------------------------------------------
 \subsubsection{Polynome $P(x)\in\mathbb R[x]_n$}
@@ -320,27 +321,27 @@ $f(t)=A\cdot \cos(\omega t + \varphi_0)=A\cdot \sin(\omega t + \frac{\pi}{2}+ \v
 	\sin^2 x + \cos^2 x = 1  \quad & \quad \tan x = \frac{\sin x}{\cos x} \\
 	e^{ix}=\cos(x)+i\sin(x) \quad & \quad e^{-ix}=\cos(x)-i\sin(x) \\
 	\sin(x)=\frac{1}{2i}\enbrace{e^{ix}-e^{-ix}} \quad & \quad \cos(x)=\frac{1}{2}\enbrace{e^{ix}+e^{-ix}} \\
-	\sinh(x)=\frac{1}{2}(-e^{-x}+e^x) & \cosh(x)=\frac{1}{2}(e^{-x}+e^x)
+	\sinh(x)=\frac{1}{2}(e^x-e^{-x}) & \cosh(x)=\frac{1}{2}(e^x+e^{-x})
 \end{eqnarray*}
-\paragraph{Additionstheoreme} % (fold)
+\subsubsection{Additionstheoreme} % (fold)
 \label{par:additionstheoreme}
  \begin{eqnarray*}
- 	& \cos (x + y) = \cos x \cos y - \sin x \sin y \\
-	& \cos \enbrace{x - \frac{\pi}{2}} = \sin x \qquad \quad \sin \enbrace{x + \frac{\pi}{2}} = \cos x \\
+ 	& \cos \enbrace{x - \frac{\pi}{2}} = \sin x \qquad \quad \sin \enbrace{x + \frac{\pi}{2}} = \cos x \\
     & \sin \enbrace{x + y} = \sin x \cos y + \cos x \sin y \\
-& 	\sin 2x = 2 \sin x \cos x        \\
-	& \cos 2x = \cos^2 x - \sin^2 x = 2\cos^2 x - 1\\
+    & \quad \sin (2x) = 2 \sin (x) \cos (x)        \\
+ 	& \cos (x + y) = \cos x \cos y - \sin x \sin y \\
+	& \quad \cos (2x) = \cos^2 (x) - \sin^2 (x) = 2\cos^2 (x) - 1\\
  \end{eqnarray*}
 % paragraph additionstheoreme (end)
 \hspace{-20pt}
 \scalebox{0.77}
 {
 $\begin{array}{c|c|c|c|c|c|c|c|c|c|c|c}
-x & 0& 30 & 45& 60 & 90 & 120 & 135& 150& 180 & 270 & 360 \\ \hline
+x & 0^{\circ}& 30^{\circ} & 45^{\circ} & 60^{\circ} & 90^{\circ} & 120^{\circ} & 135^{\circ} & 150^{\circ} & 180^{\circ} & 270^{\circ} & 360^{\circ} \\ \hline
 x & 0 & \pi / 6 & \pi / 4 & \pi / 3 & \pi / 2 & \frac{2}{3}\pi& \frac{3}{4}\pi& \frac{5}{6}\pi& \pi  & \frac{3}{2}\pi & 2 \pi \\ \hline
-\sin & 0 & \frac{1}{2} & \frac{1}{\sqrt{2}} & \frac{\sqrt 3}{2} & 1 & \frac{\sqrt 3}{2} & \frac{1}{\sqrt{2}} & \frac{1}{2} & 0 & -1 & 0 \\
-\cos & 1 & \frac{\sqrt 3}{2} & \frac{1}{\sqrt 2} & \frac{1}{2} & 0 & -\frac{1}{2} & -\frac{1}{\sqrt 2}  & -\frac{\sqrt 3}{2}   & -1 & 0 & 1 \\
-\tan & 0 & \frac{\sqrt{3}}{3}&1 &\sqrt{3} & \lightning & -\sqrt{3}& -1& -\frac{1}{\sqrt{3}} & 0 & \lightning & 0\\
+\sin & 0 & \frac{1}{2} & \frac{\sqrt{2}}{2} & \frac{\sqrt 3}{2} & 1 & \frac{\sqrt 3}{2} & \frac{\sqrt{2}}{2} & \frac{1}{2} & 0 & -1 & 0 \\
+\cos & 1 & \frac{\sqrt 3}{2} & \frac{\sqrt{2}}{2} & \frac{1}{2} & 0 & -\frac{1}{2} & -\frac{\sqrt{2}}{2}  & -\frac{\sqrt 3}{2}   & -1 & 0 & 1 \\
+\tan & 0 & \frac{\sqrt{3}}{3}&1 &\sqrt{3} & undef & -\sqrt{3}& -1& -\frac{\sqrt{3}}{3} & 0 & undef & 0\\
 \end{array}$
 }
 
@@ -351,8 +352,8 @@ x & 0 & \pi / 6 & \pi / 4 & \pi / 3 & \pi / 2 & \frac{2}{3}\pi& \frac{3}{4}\pi& 
 
 \subsection{Folgen}
 % ----------------------------------------------------------------------
-Eine Folge ist eine Abbildung $a: \mathbb N_0 \rightarrow \mathbb R,\ n \rightarrow a(n) =: a_n$\\
-explizite Folge: $(a_n)$ mit $a_n=a(n)$\\ rekursive Folge: $(a_n)$ mit $a_0=f_0,\  a_{n+1}=a(a_n)$\\
+Eine Folge ist eine Abbildung $a: \mathbb N_0 \rightarrow \mathbb R,\ n \mapsto a(n) =: a_n$\\
+explizite Folge: $(a_n)$ mit $a_n=a(n)$\\ rekursive Folge: $(a_n)$ mit $a_{n+1} = f(a_n);\  Startwert\ a_0\ gegeben$\\
 
 \subsubsection{Monotonie}
 Im Wesentlichen gibt es 3 Methoden zum Nachweis der Monotonie.\\
@@ -363,15 +364,15 @@ Für \textbf{(streng) monoton fallend} gilt:
 \item Vollständige Induktion: $\forall n \in \mathbb{N}: a_{n+1}\underset{(<)}{^{\le}} a_n$
 \end{enumerate}
 \subsubsection{Konvergenz}
-$(a_n)$ ist \emph{Konvergent} mit \emph{Grenzwert} $a$, falls: $\forall \epsilon > 0 \ \exists N  \in \mathbb N_0:  \abs{a_n -a} < \epsilon \ \forall n \ge N$\\
+$(a_n)$ ist \emph{konvergent} mit \emph{Grenzwert} $a$, falls: $\forall \epsilon > 0 \ \exists N  \in \mathbb N_0:  \abs{a_n -a} < \epsilon \ \forall n \ge N$\\
 Eine Folge konvergiert gegen eine Zahl $a$:\ $(a_n) \overset{n \rightarrow \infty}{\longrightarrow} a$
 \paragraph{Es gilt:}
 \begin{itemize}\itemsep0pt
-\item Der Grenzwert a einer Folge $(a_n)$ ist eindeutig.
-\item Ist $(a_n)$ Konvergent, so ist $(a_n)$ beschränkt
+\item Ist die Folge $(a_n)$ konvergent, so ist ihr Grenzwert eindeutig.
+\item Ist $(a_n)$ konvergent, so ist $(a_n)$ beschränkt
 \item Ist $(a_n)$ unbeschränkt, so ist $(a_n)$ divergent.
-\item \emph{Das Monotoniekriterium}: Ist $(a_n)$ beschränkt und monoton, so konvergiert $(a_n)$
-\item \emph{Das Cauchy-Kriterium:} Eine Folge $(a_n)$ konvergiert gerade dann, wenn: \\ $\forall \epsilon >0 \, \exists \,  N \in \mathbb N_0: \abs{a_n - a_m} < \epsilon \, \forall n, m \ge N$
+\item \emph{Das Monotoniekriterium}: Ist $(a_n)$ beschränkt und monoton, so konvergiert $(a_n)$.
+\item \emph{Das Cauchy-Kriterium:} Eine Folge $(a_n)$ konvergiert genau dann, wenn: \\ $\forall \epsilon >0 \, \exists \,  N \in \mathbb N_0: \abs{a_n - a_m} < \epsilon \, \forall n, m \ge N$
 \end{itemize}
 Regeln für konvergente Folgen $(a_n) \overset{n \rightarrow \infty}{\longrightarrow} a$ und $(b_n) \overset{n \rightarrow \infty}{\longrightarrow} b$:\\
 $\begin{array}{lll}
@@ -380,9 +381,9 @@ $\begin{array}{lll}
 \end{array}$
 \paragraph{Grenzwert bestimmen:}
 \begin{itemize}\itemsep0pt
-\item Wurzeln: Erweitern mit binomischer Formel
-\item Brüche: Zähler und Nenner durch den Koeffizient höchsten Grades teilen
-\item Rekursive Folgen: Fixpunkte berechnen. Fixpunkte sind mögliche Grenzwerte. Monotonie durch Vergleich $a_{n+1}$ und $a_n$ zeigen. Beschränktheit mit Induktion beweisen.
+\item Wurzeln: Erweitern mit binomischer Formel.
+\item Gebrochen-rationale Funktion $\frac{P(x)}{Q(x)}$: im Zähler und Nenner jeweils die höchste Potenz von $x$ ausklammern.
+\item Rekursive Folgen: $a_{n+1} = f(a_n)$: Zuerst Fixpunkte berechnen ($a = f(a)$). Wenn die Folge konvergiert, dann gegen einen Fixpunkt. Monotonie und Beschränktheit (z.B. per Induktion) garantieren Konvergenz, sind aber nicht notwendig. Alternierende Konvergenz ist möglich. Anfangswerte können helfen, das Verhalten abzuschätzen.
 \end{itemize}
 
 \subsubsection{Wichtige Regeln}
@@ -395,14 +396,14 @@ $\lim\limits_{n\to\infty}n^{\frac{1}{n}}=\lim\limits_{n\to\infty}\sqrt[n]{n}=1$
 
 
 \subsubsection{Limes Inferior und Superior}
-Der Limes superior einer Folge $x_n \subset \mathbb{R}$ ist der größte Grenzwert konvergenter Teilfolgen $x_{n_k}$ der Folge ${x_n}$ \\ \\
-Der Limes inferior einer Folge $x_n \subset \mathbb{R}$ der kleinste Grenzwert konvergenter Teilfolgen $x_{n_k}$ der Folge $x_n$
+Der Limes superior einer Folge $x_n \subset \mathbb{R}$ ist der größte Grenzwert konvergenter Teilfolgen $x_{n_k}$ der Folge ${x_n}$. \\ \\
+Der Limes inferior einer Folge $x_n \subset \mathbb{R}$ der kleinste Grenzwert konvergenter Teilfolgen $x_{n_k}$ der Folge $x_n$.
 
 
 \subsection{Reihen}
 % ----------------------------------------------------------------------
 \begin{eqnarray*}
-	\underset{\text{Harmonische Reihe}}{\sum_{n=1}^\infty \frac{1}{n} = \infty} \qquad \qquad  \qquad \qquad \underset{\text{Geometrische Reihe}}{\sum_{n=0}^\infty q^n = \frac{1}{1-q}} \qquad |q|<1
+	\underset{\text{Harmonische Reihe}}{\sum_{n=1}^\infty \frac{1}{n} = \infty} \qquad \qquad  \qquad \qquad \underset{\text{Geometrische Reihe}}{\sum_{n=0}^\infty q^n = \frac{1}{1-q}} \qquad falls\ |q|<1
 \end{eqnarray*}
 \begin{eqnarray*}
 	\sum_{n=1}^\infty \frac{1}{n^\alpha} = \begin{cases} \text{konvergent}, & \alpha > 1 \\ \text{divergent}, & \alpha \le 1 \end{cases} \qquad \qquad \qquad \qquad \qquad \qquad
@@ -412,7 +413,7 @@ Der Limes inferior einer Folge $x_n \subset \mathbb{R}$ der kleinste Grenzwert k
 
 \subsubsection{Konvergenzkriterien}
 $\sum^{\infty}_{n = 0} a_n$ divergiert, falls $a_n \not \rightarrow 0$ oder\\
-Minorante:$\exists \sum^{\infty}_{n = 0} b_n (divergiert) \quad \land \quad a_n \ge b_n \quad \forall n\ge n_0$\\[0.6em]
+Minorante:$\exists \sum^{\infty}_{n = 0} b_n$ (divergiert)$ \quad \land \quad a_n \ge b_n \quad \forall n\ge n_0$\\[0.6em]
 $\sum^{\infty}_{n = 0}(-1)^n a_n$ konvergiert, if $(a_n)$ monoton fallende Nullfolge (Leibnitz)\\
 oder Majorante: $\exists \sum^{\infty}_{n = 0} b_n = b \quad \land \quad a_n \le b_n \quad \forall n\ge n_0$\\
 \\
